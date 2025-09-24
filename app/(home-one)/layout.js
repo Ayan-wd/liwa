@@ -3,7 +3,7 @@ import { inter, syne } from "../fonts";
 import "bootstrap/dist/css/bootstrap.min.css";
 
 // react modal video css
-import "react-modal-video/css/modal-video.css";
+
 
 // fonts
 import "../../public/css/fontawesome.css";
