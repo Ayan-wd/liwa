@@ -1,0 +1,9 @@
+.custom-nav-link {
+  color: #ffffff !important; /* Default white */
+  font-weight: 500;
+  transition: color 0.3s ease-in-out;
+}
+
+.custom-nav-link:hover {
+  color: #0096FF !important; /* Blue on hover */
+}
