@@ -1,4 +1,4 @@
-import { inter, syne } from "../fonts";
+import { montserrat, roboto } from "./../fonts";
 // Bootstrap
 import "bootstrap/dist/css/bootstrap.min.css";
 
@@ -36,7 +36,7 @@ export const metadata = {
 export default function HomeOneLayout({ children }) {
 	return (
 		<html lang="en">
-			<body className={`${syne.variable} ${inter.variable}`}>
+			<body className={`${montserrat.variable} ${roboto.variable}`}>
 				<ImportBsJS />
 				<Header />
 				{children}

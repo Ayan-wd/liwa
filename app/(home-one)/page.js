@@ -45,7 +45,7 @@ export default function HomeOne() {
       <About />
       <Projects />
       <WhyChooseUs />
-      <AutoSlider />
+     
     </>
   );
 }

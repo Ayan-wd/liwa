@@ -23,7 +23,6 @@ function ServicePage() {
     <>
       <BreadCrumb title="Service" />
       <Services services={services} />
-      <AutoSlider />
       <WhyChooseUs />
       <TwoColumnFaq />
     </>

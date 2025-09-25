@@ -6,10 +6,11 @@ function Content() {
 		<div className="aximo-default-content">
 			<h2>
 				<span className="aximo-title-animation">
-					Our commitment 
-				</span>
-				 to excellence & reliability
+					Our commitment
+				</span>{" "}
+				to excellence & reliability
 			</h2>
+
 			<p>
 				At Liwa Industries, we supply high-quality oilfield equipment designed
 				to meet the rigorous demands of the energy sector. Our products ensure

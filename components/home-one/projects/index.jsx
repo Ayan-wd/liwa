@@ -70,11 +70,11 @@ function Projects() {
 	return (
 		<div className="section dark-bg aximo-section-padding">
 			<div className="container">
-				<div className="aximo-section-title center light">
+				<div className="aximo-section-title center dark">
 					<h2>
-						Delivering Excellence in
+						Delivering Excellence 
 						<span className="aximo-title-animation">
-							Oilfield Equipment & Industrial Solutions
+							in Oilfield Equipment & Industrial Solutions
 						</span>
 					</h2>
 				</div>

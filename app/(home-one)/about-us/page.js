@@ -9,7 +9,7 @@ function AboutUs() {
 			<BreadCrumb title="About Us" />
 			<About />
 			<Story />
-			<AutoSlider />
+			
 		</>
 	);
 }

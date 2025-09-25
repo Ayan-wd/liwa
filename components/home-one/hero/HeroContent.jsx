@@ -7,7 +7,7 @@ function HeroContent() {
 			<FadeInStaggerTwoChildren>
 				<h1>
 					<span className="aximo-title-animation">
-						Powering 
+						Powering
 					</span>{" "}
 					Global Energy
 				</h1>
@@ -19,8 +19,9 @@ function HeroContent() {
 			</FadeInStaggerTwoChildren>
 			<FadeInStaggerTwoChildren>
 				<Link className="aximo-call-btn" href="/contact-us">
-					Book a free consultation <i className="icon-call"></i>
+					Get instant quote <i className="icon-call"></i>
 				</Link>
+
 
 			</FadeInStaggerTwoChildren>
 		</FadeInStaggerTwo>

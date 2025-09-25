@@ -10,13 +10,12 @@ import "../../../globals.css";
 function Header() {
   return (
     <header
-      className="site-header aximo-header-section aximo-header1 dark-bg"
+      className="site-header aximo-header-section aximo-header dark-bg"
       id="sticky-menu"
     >
       <div className="container">
         <nav className="navbar site-navbar">
           <HeaderLogo />
-
           <div className="menu-block-wrapper">
             <DesktopNav>
               <NavItem url="/" exact="true" className="nav-link custom-nav-link ">
@@ -27,6 +26,9 @@ function Header() {
               </NavItem>
               <NavItem url="services" className="nav-link custom-nav-link">
                 Services
+              </NavItem>
+                <NavItem url="our-projects" className="nav-link custom-nav-link">
+                Projects
               </NavItem>
               <NavItem url="contact-us" className="nav-link custom-nav-link">
                 Contact Us

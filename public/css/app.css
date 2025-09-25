@@ -24,7 +24,7 @@
 	--body-color: #0c0c0c;
 	--accent-color: #FFD700;
 	/* to change hero heading change white smoke */
-	--white-smoke: #D4B483;
+	--white-smoke: #e7e1d9;
 	--white-color: #ffffff;
 	--orange-color: #ff4612;
 	--orange-color2: #ff8064;
@@ -38,7 +38,7 @@
 	--light-color5: #f3ede8;
 	--light-color6: #f8fcdd;
 	/* for bg change change the dark bg class */
-	--dark-bg: #3D3B2F;
+	--dark-bg: #ffffff;
 	--dark-bg2: #2c2c2c;
 	--dark-bg3: #0b1040;
 	--white-bg: #ffffff;
@@ -103,7 +103,7 @@ html {
 body {
 	height: 100% !important;
 	color: var(--body-color);
-	font-family: var(--font-inter);
+	font-family: var(--font-montserrat);
 	-webkit-font-smoothing: antialiased;
 	-moz-osx-font-smoothing: grayscale;
 	vertical-align: baseline;
@@ -3296,7 +3296,7 @@ button#aximo-submit-btn2:hover .aximo-label-up {
 .aximo-breadcrumb {
 	text-align: center;
 	padding: 195px 0 130px;
-	background-color: var(--dark-bg);
+	background-color: var(--dark-bg2);
 }
 @media (max-width: 991px) {
 	.aximo-breadcrumb {
