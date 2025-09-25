@@ -23,7 +23,8 @@
 	--heading-color6: #0b1040;
 	--body-color: #0c0c0c;
 	--accent-color: #FFD700;
-	--white-smoke: #fdfde1;
+	/* to change hero heading change white smoke */
+	--white-smoke: #D4B483;
 	--white-color: #ffffff;
 	--orange-color: #ff4612;
 	--orange-color2: #ff8064;
@@ -36,13 +37,15 @@
 	--light-color4: #fffcf2;
 	--light-color5: #f3ede8;
 	--light-color6: #f8fcdd;
-	--dark-bg: #2E4E3F;
+	/* for bg change change the dark bg class */
+	--dark-bg: #3D3B2F;
 	--dark-bg2: #2c2c2c;
 	--dark-bg3: #0b1040;
 	--white-bg: #ffffff;
 	--orange-bg: #ff4612;
 	--orange-bg2: #ff8064;
-	--accent-bg: #F5F5F5;
+
+	--accent-bg: #D4B483;
 	--yellow-bg: #ffe757;
 	--corn-bg: #f4b905;
 	--blue-bg: #0000ff;

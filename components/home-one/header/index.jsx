@@ -19,7 +19,7 @@ function Header() {
 
           <div className="menu-block-wrapper">
             <DesktopNav>
-              <NavItem url="/" exact="true" className="nav-link custom-nav-link">
+              <NavItem url="/" exact="true" className="nav-link custom-nav-link ">
                 Home
               </NavItem>
               <NavItem url="about-us" className="nav-link custom-nav-link">

@@ -26,10 +26,10 @@ export default function ServiceDetailPage({ params }) {
         <nav aria-label="breadcrumb" className="mb-3">
           <ol className="breadcrumb">
             <li className="breadcrumb-item">
-              <Link href="/">Home</Link>
+              <Link className="accent-bg" href="/">Home</Link>
             </li>
             <li className="breadcrumb-item">
-              <Link href="/services">Services</Link>
+              <Link className="accent-bg" href="/services">Services</Link>
             </li>
             <li className="breadcrumb-item active" aria-current="page">
               {service.title}
