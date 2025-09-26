@@ -13,6 +13,10 @@ export const menuItemsData = [
 		title: "Services",
 		url: "service",
 	},
+		{
+		title: "Our Projects",
+		url: "our-projects",
+	},
 	{
 		title: "Contact Us",
 		url: "contact-us",

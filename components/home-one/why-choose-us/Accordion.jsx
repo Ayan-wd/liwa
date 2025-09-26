@@ -9,7 +9,7 @@ function Accordion() {
 			<FadeInStaggerTwoChildren className="accordion-item">
 				<h3 className="accordion-header">
 					<button
-						className="accordion-button"
+						className="accordion-button text-black"
 						type="button"
 						data-bs-toggle="collapse"
 						data-bs-target="#collapseOne"
@@ -22,7 +22,7 @@ function Accordion() {
 					className="accordion-collapse collapse show"
 					data-bs-parent="#aximo-accordion"
 				>
-					<div className="accordion-body">
+					<div className="accordion-body text-white">
 						We work closely with clients to understand their specific project
 						needs, technical specifications, and industry standards.
 					</div>
@@ -32,7 +32,7 @@ function Accordion() {
 			<FadeInStaggerTwoChildren className="accordion-item">
 				<h3 className="accordion-header">
 					<button
-						className="accordion-button"
+						className="accordion-button text-black"
 						type="button"
 						data-bs-toggle="collapse"
 						data-bs-target="#collapseTwo"
@@ -56,7 +56,7 @@ function Accordion() {
 			<FadeInStaggerTwoChildren className="accordion-item">
 				<h3 className="accordion-header">
 					<button
-						className="accordion-button collapsed"
+						className="accordion-button collapsed text-black"
 						type="button"
 						data-bs-toggle="collapse"
 						data-bs-target="#collapseThree"

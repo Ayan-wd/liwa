@@ -1,5 +1,4 @@
 "use client";
-import { use, useEffect, useState } from "react";
 import About from "@/components/home-one/about";
 import AutoSlider from "@/components/home-one/auto-slider";
 import Hero from "@/components/home-one/hero";
@@ -7,7 +6,6 @@ import Projects from "@/components/home-one/projects";
 import Services from "@/components/home-one/services";
 import WhyChooseUs from "@/components/home-one/why-choose-us";
 import { getAllServices } from "@/lib/services";
-import Preloader from "@/components/common/Preloader"; // 👈 import preloader
 
 const mkIconFromClass = (className) =>
   function Icon() {
@@ -23,21 +21,6 @@ const services = getAllServices().map((s) => ({
 }));
 
 export default function HomeOne() {
-  const [loading, setLoading] = useState(true);
-
-  useEffect(() => {
-    // simulate page load delay (can also rely on Preloader internal timer)
-    const timer = setTimeout(() => {
-      setLoading(false);
-    }, 3000); // 1s delay
-
-    return () => clearTimeout(timer);
-  }, []);
-
-  if (loading) {
-    return <Preloader />; // 👈 show preloader first
-  }
-
   return (
     <>
       <Hero />
@@ -45,7 +28,6 @@ export default function HomeOne() {
       <About />
       <Projects />
       <WhyChooseUs />
-     
     </>
   );
 }

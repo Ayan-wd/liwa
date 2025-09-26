@@ -9,8 +9,8 @@ function About() {
 				<div className="aximo-section-title">
 					<div className="row">
 						<div className="col-lg-7">
-							<h2>
-								<span className="aximo-title-animation">
+							<h2 className="text-black">
+								<span className="aximo-title-animation text-black">
 									Your Partners in
 								</span>{" "}
 								Global Energy Supplies

@@ -43,7 +43,7 @@ function TwoColumnFaq() {
       <div className="container">
         {/* Section Title */}
         <div className="aximo-section-title text-center mb-12">
-          <h2 className="text-3xl font-bold text-gray-900">
+          <h2 className="text-3xl font-bold text-gray-900 text-black">
             Frequently Asked Questions
           </h2>
           <p className="text-gray-600 mt-3 max-w-2xl mx-auto">
@@ -66,7 +66,7 @@ function TwoColumnFaq() {
                     <HelpCircle className="text-blue-500 w-8 h-8" />
                   </div>
                   <div>
-                    <h3 className="text-lg font-semibold text-gray-800 mb-1">
+                    <h3 className="text-lg font-semibold text-black mb-1">
                       {faq.title}
                     </h3>
                     <p className="text-gray-600">{faq.text}</p>
@@ -88,7 +88,7 @@ function TwoColumnFaq() {
                     <HelpCircle className="text-blue-500 w-8 h-8" />
                   </div>
                   <div>
-                    <h3 className="text-lg font-semibold text-gray-800 mb-1">
+                    <h3 className="text-lg font-semibold text-black mb-1">
                       {faq.title}
                     </h3>
                     <p className="text-gray-600">{faq.text}</p>

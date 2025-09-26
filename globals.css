@@ -1,9 +1,42 @@
-.custom-nav-link {
-  color: #ffffff !important; /* Default white */
-  font-weight: 500;
-  transition: color 0.3s ease-in-out;
+/* Card styling */
+.service-card {
+  background: transparent !important; /* no white background */
+  transition: transform 0.3s ease, box-shadow 0.3s ease, background 0.3s ease;
+}
+.service-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 12px 30px rgba(0,0,0,0.15);
+  background: rgba(0,0,0,0.03); /* optional subtle hover bg */
 }
 
-.custom-nav-link:hover {
-  color: #0096FF !important; /* Blue on hover */
+/* Title underline animation */
+.service-title::after {
+  content: "";
+  position: absolute;
+  bottom: -6px;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background-color: #000;
+  transition: width 0.3s ease;
+}
+.service-card:hover .service-title::after {
+  width: 40%;
+}
+
+/* Arrow hover animation */
+.arrow-icon {
+  transition: transform 0.3s ease, color 0.3s ease;
+}
+.service-card:hover .arrow-icon {
+  transform: translateX(6px);
+  color: var(--accent-color, #f39c12);
+}
+
+/* Clamp text to 3 lines */
+.text-truncate-3 {
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
 }

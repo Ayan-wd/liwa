@@ -4,7 +4,7 @@ import Image from "next/image";
 function Content() {
 	return (
 		<div className="aximo-default-content">
-			<h2>
+			<h2 className="text-black">
 				<span className="aximo-title-animation">
 					Our commitment
 				</span>{" "}

@@ -71,7 +71,7 @@ function Projects() {
 		<div className="section dark-bg aximo-section-padding">
 			<div className="container">
 				<div className="aximo-section-title center dark">
-					<h2>
+					<h2 className="text-black">
 						Delivering Excellence 
 						<span className="aximo-title-animation">
 							in Oilfield Equipment & Industrial Solutions

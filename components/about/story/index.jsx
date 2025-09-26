@@ -7,7 +7,7 @@ function Story() {
 		<div className="section aximo-section-padding6">
 			<div className="container">
 				<div className="aximo-section-title center title-description">
-					<h2>
+					<h2 className="text-black">
 						<span className="aximo-title-animation">
 							Our story is
 						</span>

@@ -1,31 +1,32 @@
-import Link from "next/link"
-import { ArrowRight } from "lucide-react"
+import Link from "next/link";
+import { ArrowRight } from "lucide-react";
+import"../../../globals.css";
 
 function ServiceCard({ service: { title, description, icon: Icon, slug } }) {
   return (
-    <div className="aximo-iconbox-wrap flex flex-col h-full">
+    <div className="card service-card border border-2 border-dark rounded-4 h-100 bg-transparent">
       <Link
         href={slug ? `/services/${slug}` : `/single-service`}
-        className="aximo-icon inline-block d-flex flex-column h-100 p-3   "
+        className="d-flex flex-column h-100 text-decoration-none p-4"
       >
-        {/* Top content */}
-        <div>
-          <div className="aximo-iconbox-icon">
-            <Icon size={40} strokeWidth={1.5} />
-          </div>
-          <div className="aximo-iconbox-data">
-            <h3>{title}</h3>
-            <p className="text-black">{description}</p>
-          </div>
+
+        {/* Title & Description */}
+        <div className="flex-grow-1">
+          <h5 className="fw-bold text-dark position-relative service-title">
+            {title}
+          </h5>
+          <p className="text-muted small mt-3 mb-0 text-truncate-3">
+            {description}
+          </p>
         </div>
 
-        {/* Arrow at the bottom right */}
-        <div className="mt-auto d-flex justify-content-start">
-        <ArrowRight size={24} strokeWidth={2} className="text-dark" />
-      </div>
+        {/* Arrow CTA */}
+        <div className="mt-4 d-flex justify-content-end align-items-center">
+          <ArrowRight size={26} strokeWidth={2} className="text-dark arrow-icon" />
+        </div>
       </Link>
     </div>
-  )
+  );
 }
 
-export default ServiceCard
+export default ServiceCard;

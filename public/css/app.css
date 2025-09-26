@@ -15,7 +15,7 @@
 
 **/
 :root {
-	--heading-color: #000;
+	--heading-color: #ffffff;
 	--heading-color2: #1b1b1b;
 	--heading-color3: #191931;
 	--heading-color4: #221f1a;
@@ -24,7 +24,7 @@
 	--body-color: #0c0c0c;
 	--accent-color: #FFD700;
 	/* to change hero heading change white smoke */
-	--white-smoke: #e7e1d9;
+	--white-smoke: #ffffff;
 	--white-color: #ffffff;
 	--orange-color: #ff4612;
 	--orange-color2: #ff8064;
@@ -45,7 +45,7 @@
 	--orange-bg: #ff4612;
 	--orange-bg2: #ff8064;
 
-	--accent-bg: #D4B483;
+	--accent-bg: #3B82F6;
 	--yellow-bg: #ffe757;
 	--corn-bg: #f4b905;
 	--blue-bg: #0000ff;
@@ -9970,12 +9970,15 @@ a.comment-reply {
 	padding: 30px;
 	margin-right: 10px;
 	border-radius: 30px;
-	border: 1px solid var(--heading-color);
+	border: 2px solid black;
 }
 @media (max-width: 991px) {
 	.aximo-main-form {
 		margin-right: 0;
 	}
+}
+.form-input {
+border: 2px solid black;
 }
 .aximo-main-field {
 	margin-bottom: 22px;
