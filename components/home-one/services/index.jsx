@@ -6,8 +6,8 @@ function Services({ services }) {
 		<section className="section aximo-section-padding4">
 			<div className="container">
 				{/* Section title */}
-				<div className="text-center mb-5">
-					<h2 className="fw-bold text-black">
+				<div className="display-5 mb-4 mb-md-5 text-center text-black">
+					<h2 className="display-3 mb-4 mb-md-2 text-center text-black">
 						We deliver reliable{" "}
 						<span className="aximo-title-animation">industrial solutions</span>
 					</h2>

@@ -7,7 +7,7 @@ function ContactInfo() {
       <div className="container">
         <div className="aximo-contact-info-title">
           <h2>
-            <span className="aximo-title-animation text-black">
+            <span className="display-3 mb-4 mb-md-5 text-center text-black">
               Contact Information
             </span>
           </h2>
@@ -73,3 +73,4 @@ function ContactInfo() {
 }
 
 export default ContactInfo;
+																											

@@ -7,11 +7,9 @@ function Story() {
 		<div className="section aximo-section-padding6">
 			<div className="container">
 				<div className="aximo-section-title center title-description">
-					<h2 className="text-black">
-						<span className="aximo-title-animation">
-							Our story is
-						</span>
-						built on reliability & trust
+					<h2 className="display-3 mb-4 mb-md-2 text-center text-black">
+						<span className="aximo-title-animation">Our story</span> is built on reliability &amp; trust
+
 					</h2>
 					<p>
 						Established to serve the oil &amp; gas industry, Liwa Industries has

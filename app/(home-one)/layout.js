@@ -36,6 +36,7 @@ export const metadata = {
 export default function HomeOneLayout({ children }) {
 	return (
 		<html lang="en">
+			
 			<body className={`${montserrat.variable} ${roboto.variable}`}>
 				<ImportBsJS />
 				<Header />

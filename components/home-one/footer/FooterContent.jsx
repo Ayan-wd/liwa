@@ -18,7 +18,7 @@ function FooterContent() {
 
 			{/* Quick Links */}
 			<div className="col-12 col-md-6 col-lg-3">
-				<h6 className="text-white text-uppercase text-secondary small fw-semibold mb-3">
+				<h6 className="text-uppercase small fw-semibold mb-3 text-white">
 					Quick Links
 				</h6>
 				<ul className="list-unstyled mb-0 small">

@@ -8,7 +8,7 @@ import Link from "next/link";
 
 function Hero() {
   return (
-    <section className="aximo-hero-section position-relative d-flex align-items-center min-vh-100 overflow-hidden">
+    <section className="aximo-hero-section position-relative d-flex align-items-center justify-content-center min-vh-100 overflow-hidden">
       {/* Background Image */}
       <Image
         src={HeroThumbImg}
@@ -24,11 +24,11 @@ function Hero() {
       {/* Content */}
       <div className="container position-relative z-2">
         <FadeInStaggerTwo>
-          <div className="row text-start text-white">
+          <div className="display-5 mb-4 mb-md-5 text-left text-white">
             <div className="col-12 col-md-10 col-lg-8">
               {/* Heading */}
               <FadeInStaggerTwoChildren>
-                <h1 className="text-5xl fw-bold lh-tight text-white">
+                <h1 className="display-5 mb-4 mb-md-4 text-left text-white fw-bold ">
                   <span className="aximo-title-animation text-accent">Powering</span>{" "}
                   Global Energy
                 </h1>
@@ -36,7 +36,7 @@ function Hero() {
 
               {/* Paragraph */}
               <FadeInStaggerTwoChildren>
-                <p className="mt-3 mt-md-4 fs-5">
+                <p className="display-5 mb-4 mb-md-2 text-left text-white fs-4">
                   Liwa Industrial Equipment FZ LLC is a premier supplier of
                   high-quality oilfield equipment. With a deep understanding of
                   the industry’s demands, we specialize in delivering reliable

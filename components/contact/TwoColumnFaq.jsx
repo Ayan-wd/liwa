@@ -42,8 +42,8 @@ function TwoColumnFaq() {
     <div className="section aximo-section-padding bg-gray-50">
       <div className="container">
         {/* Section Title */}
-        <div className="aximo-section-title text-center mb-12">
-          <h2 className="text-3xl font-bold text-gray-900 text-black">
+        <div className="aximo-section-title text-center mb-12 ">
+          <h2 className="display-3 mb-4 mb-md-2 text-center text-black">
             Frequently Asked Questions
           </h2>
           <p className="text-gray-600 mt-3 max-w-2xl mx-auto">
