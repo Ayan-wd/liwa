@@ -36,7 +36,7 @@ function Hero() {
 
               {/* Paragraph */}
               <FadeInStaggerTwoChildren>
-                <p className="display-5 mb-4 mb-md-2 text-left text-white fs-4">
+                <p className="display-2 mb-4 mb-md-2 text-left text-white fs-4">
                   Liwa Industrial Equipment FZ LLC is a premier supplier of
                   high-quality oilfield equipment. With a deep understanding of
                   the industry’s demands, we specialize in delivering reliable
@@ -48,11 +48,12 @@ function Hero() {
               {/* CTA Button */}
               <FadeInStaggerTwoChildren>
                 <Link
-                  className="aximo-call-btn d-inline-block mt-4 mt-md-5 px-6 py-3 rounded-2xl bg-accent text-black fw-semibold shadow-lg hover:bg-accent/90 transition"
                   href="/contact-us"
+                  className="btn btn-primary rounded-pill px-4 py-2 fw-semibold shadow-lg"
                 >
-                  Get instant quote <i className="icon-call text-black ms-2"></i>
+                  Get Instant Quote <i className="icon-call ms-2"></i>
                 </Link>
+
               </FadeInStaggerTwoChildren>
             </div>
           </div>

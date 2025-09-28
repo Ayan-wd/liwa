@@ -3,7 +3,7 @@ import { montserrat, roboto } from "./../fonts";
 import "bootstrap/dist/css/bootstrap.min.css";
 
 // react modal video css
-
+ import 'tailwindcss/tailwind.css'
 
 // fonts
 import "../../public/css/fontawesome.css";
