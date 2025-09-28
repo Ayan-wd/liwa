@@ -2,6 +2,9 @@ import Link from "next/link"
 import Image from "next/image"
 import { notFound } from "next/navigation"
 import { getAllServices, getServiceBySlug } from "@/lib/services"
+import servicesbanner from "../../../../public/images/service/servicesbanner.jpg"
+import BreadCrumb from "@/components/common/Breadcrumb"
+
 
 export async function generateStaticParams() {
   return getAllServices().map((s) => ({ slug: s.slug }))
@@ -21,6 +24,8 @@ export default function ServiceDetailPage({ params }) {
   if (!service) return notFound()
 
   return (
+    <>
+    <BreadCrumb title="Services" backgroundImage={servicesbanner.src} />
     <main className="py-5" style={{ marginTop: "96px" }}>
       <div className="container">
         <nav aria-label="breadcrumb" className="mb-3">
@@ -38,7 +43,7 @@ export default function ServiceDetailPage({ params }) {
         </nav>
 
         <header className="mb-4">
-          <h1 className="h2 mb-2">{service.title}</h1>
+          <h1 className="display-3 mb-4 mb-md-1 text-left text-black">{service.title}</h1>
           <p className="text-muted m-0">{service.excerpt}</p>
         </header>
 
@@ -59,7 +64,7 @@ export default function ServiceDetailPage({ params }) {
           <div className="col-12 col-lg-8">
             {service.sections?.map((sec, i) => (
               <section className="mb-4" key={i}>
-                <h2 className="h4 mb-2">{sec.heading}</h2>
+                <h2 className="display-5 mb-4 mb-md-1 text-left text-black">{sec.heading}</h2>
                 {sec.body ? <p className="text-body">{sec.body}</p> : null}
                 {sec.bullets ? (
                   <ul className="list-unstyled ms-3">
@@ -78,7 +83,7 @@ export default function ServiceDetailPage({ params }) {
           <aside className="col-12 col-lg-4">
             <div className="card border-0 shadow-sm">
               <div className="card-body">
-                <h3 className="h5 mb-3">Quick Facts</h3>
+                <h3 className="display-5 mb-4 mb-md-2 text-left text-black ">Quick Facts</h3>
                 <dl className="row mb-0">
                   {service.specs?.leadTime ? (
                     <>
@@ -99,5 +104,6 @@ export default function ServiceDetailPage({ params }) {
         </div>
       </div>
     </main>
+    </>
   )
 }

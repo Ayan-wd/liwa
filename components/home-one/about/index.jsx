@@ -10,6 +10,9 @@ function About() {
 					<div className="row">
 						<div className="col-lg-7">
 							<h2 className="display-3 mb-4 mb-md-5 text-left text-black">
+								<h3 className="text-sm uppercase text-blue-600 font-semibold text center">
+									About Us
+								</h3>
 								<span className="aximo-title-animation text-black">
 									Your Partners in
 								</span>{" "}

@@ -14,12 +14,12 @@ function BreadCrumb({ title, backgroundImage }) {
 			{/* 🔹 Black overlay */}
 			<div
 				className="position-absolute top-0 start-0 w-100 h-100"
-				style={{ backgroundColor: "rgba(0,0,0,0.5)" }} // 50% black
+				style={{ backgroundColor: "rgba(0,0,0,0.7)" }} // 50% black
 			></div>
 
 			{/* Content above overlay */}
 			<div className="container position-relative">
-				<h1 className="display-4 fw-bold">{title}</h1>
+				<h1 className="display-3 mb-4 mb-md-1 text-center text-white">{title}</h1>
 				<nav className="mt-3">
 					<ul className="breadcrumb justify-content-center bg-transparent p-0 m-0">
 						<li className="breadcrumb-item">

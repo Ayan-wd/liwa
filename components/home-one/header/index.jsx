@@ -1,5 +1,4 @@
 "use client";
-import { useEffect, useState } from "react";
 import DesktopNav from "@/components/common/navigation/desktop-nav/DesktopNav";
 import NavItem from "@/components/common/navigation/desktop-nav/NavItem";
 import MobileNavbar from "@/components/common/navigation/mobile-nav/MobileNavbar";
@@ -9,28 +8,15 @@ import HeaderLogo from "./HeaderLogo";
 import "../../../globals.css";
 
 function Header() {
-  const [scrolled, setScrolled] = useState(false);
-
-  useEffect(() => {
-    const handleScroll = () => {
-      setScrolled(window.scrollY > 50);
-    };
-    window.addEventListener("scroll", handleScroll);
-    return () => window.removeEventListener("scroll", handleScroll);
-  }, []);
-
-  // ✅ Bootstrap text utilities
-  const navLinkClass = `nav-link ${scrolled ? "text-dark" : "text-white"}`;
+  // ✅ Always dark text (same as after scroll)
+  const navLinkClass = "nav-link text-dark";
 
   return (
     <header
-      className={`site-header aximo-header-section aximo-header ${
-        scrolled ? "shadow-sm" : ""
-      } fixed-top`}
+      className="site-header aximo-header-section aximo-header shadow-sm fixed-top"
       id="sticky-menu"
       style={{
-        backgroundColor: scrolled ? "rgba(255, 255, 255, 0.9)" : "transparent",
-        transition: "background-color 0.3s ease",
+        backgroundColor: "rgba(255, 255, 255, 0.9)", // same as after scroll
       }}
     >
       <div className="container">

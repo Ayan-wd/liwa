@@ -65,6 +65,9 @@ function Projects() {
     <section className="section bg-light py-5">
       <div className="container">
         <div className="text-center mb-5">
+          <h3 className="text-sm uppercase text-blue-600 font-semibold text center">
+									Our Projects
+								</h3>
           <h2 className="display-4  text-dark">
             Delivering Excellence{" "}
             <span className="text-black">
