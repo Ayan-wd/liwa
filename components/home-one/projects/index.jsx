@@ -1,49 +1,90 @@
 "use client";
+
 import { Mousewheel, Pagination } from "swiper/modules";
 import { Swiper, SwiperSlide } from "swiper/react";
-import Project1Img from "../../../public/images/v1/project1.png";
+import Project1Img from "../../../public/images/v1/project1.jpg";
 import Project2Img from "../../../public/images/v1/project2.png";
 import Project3Img from "../../../public/images/v1/project3.png";
 import Project4Img from "../../../public/images/v1/project4.png";
 import ProjectCard from "./ProjectCard";
 import "swiper/css";
 import "swiper/css/pagination";
+import Link from "next/link";
 
+// ✅ Updated Project Data
 const projectsData = [
+  // Saudi Aramco Projects
   {
     id: crypto.randomUUID(),
-    title: "Industrial Valves",
+    title: "Wasit Gas Plant",
     description:
-      "High-performance valves including Gate, Ball, Check, Butterfly, and Cryogenic valves for safe and efficient oil & gas operations.",
+      "A mega gas processing facility by Saudi Aramco, providing clean natural gas for domestic and industrial use.",
     img: Project1Img,
   },
   {
     id: crypto.randomUUID(),
-    title: "Flanges & Spectacle Blinds",
+    title: "Fadhili Gas Plant",
     description:
-      "A complete range of flanges such as Weld Neck, Slip-On, Blind, and Spectacle Blinds built for durability and reliability.",
+      "A state-of-the-art gas plant enhancing Saudi Arabia’s energy sustainability and industrial development.",
     img: Project2Img,
   },
   {
     id: crypto.randomUUID(),
-    title: "Pipes & Casing",
+    title: "Sadara Petrochemical Facility",
     description:
-      "Seamless, ERW, EFW, SAW, and LSAW pipes & casings that deliver strength and performance in demanding environments.",
+      "One of the world’s largest integrated chemical complexes, a joint venture between Saudi Aramco and Dow.",
     img: Project3Img,
   },
   {
     id: crypto.randomUUID(),
-    title: "Fittings & O’lets",
+    title: "Manifa Project",
     description:
-      "BW & Forged Fittings (Elbows, Tees, Reducers) and O’lets (Sock, Weld, Thread, Nipp, Braz) for precise industrial connections.",
+      "A pioneering offshore oilfield project built with innovative causeway and drilling technologies.",
     img: Project4Img,
   },
   {
     id: crypto.randomUUID(),
-    title: "Compression Fittings",
+    title: "Karan Gas Plant",
     description:
-      "Engineered compression fittings including elbows, unions, flare nuts, studs, and tees for secure installations.",
+      "The first non-associated gas field development project by Saudi Aramco, boosting domestic gas supply.",
     img: Project1Img,
+  },
+
+  // SABIC Projects
+  {
+    id: crypto.randomUUID(),
+    title: "Petrokemya",
+    description:
+      "A SABIC affiliate producing a wide range of petrochemical products supporting global industries.",
+    img: Project2Img,
+  },
+  {
+    id: crypto.randomUUID(),
+    title: "Kemya",
+    description:
+      "A joint venture between SABIC and ExxonMobil specializing in elastomers and petrochemical products.",
+    img: Project3Img,
+  },
+  {
+    id: crypto.randomUUID(),
+    title: "Hadeed",
+    description:
+      "SABIC’s steel manufacturing affiliate producing long and flat steel products for infrastructure projects.",
+    img: Project4Img,
+  },
+  {
+    id: crypto.randomUUID(),
+    title: "Sharq",
+    description:
+      "One of SABIC’s joint ventures producing ethylene, polyethylene, and ethylene glycol at a massive scale.",
+    img: Project1Img,
+  },
+  {
+    id: crypto.randomUUID(),
+    title: "Sadaf",
+    description:
+      "A SABIC joint venture producing styrene and MTBE, strengthening petrochemical capabilities.",
+    img: Project2Img,
   },
 ];
 
@@ -65,16 +106,15 @@ function Projects() {
     <section className="section bg-light py-5">
       <div className="container">
         <div className="text-center mb-5">
-          <h3 className="text-sm uppercase text-blue-600 font-semibold text center">
-									Our Projects
-								</h3>
-          <h2 className="display-4  text-dark">
+          <h3 className="text-sm uppercase text-blue-600 font-semibold">
+            Our Projects
+          </h3>
+          <h2 className="display-4 text-dark">
             Delivering Excellence{" "}
-            <span className="text-black">
-              in Oilfield Equipment & Industrial Solutions
-            </span>
+            <span className="text-black">in Oilfield Equipment & Industrial Solutions</span>
           </h2>
         </div>
+
 
         <Swiper {...swiperSettings} className="aximo-project-slider">
           {projectsData.map((project) => (
@@ -82,7 +122,17 @@ function Projects() {
               <ProjectCard project={project} />
             </SwiperSlide>
           ))}
+          <div className="text-center mt-5">
+            <Link
+              href="/our-projects"
+              className="btn btn-primary rounded-pill px-4 py-2"
+            >
+              View All Projects
+            </Link>
+          </div>
         </Swiper>
+
+
       </div>
     </section>
   );

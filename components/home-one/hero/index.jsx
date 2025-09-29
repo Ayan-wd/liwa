@@ -5,6 +5,9 @@ import React, { useEffect, useState } from "react";
 import { FiArrowRight } from "react-icons/fi";
 import { motion, AnimatePresence } from "framer-motion";
 import hero from "../../../public/images/v1/hero-thumb.jpg";
+import hero1 from "../../../public/images/v1/banner2.jpg";
+import hero2 from "../../../public/images/v1/banner3.jpg";
+
 
 const slides = [
   {
@@ -17,7 +20,7 @@ const slides = [
   },
   {
     id: 2,
-    image: hero.src,
+    image: hero1.src,
     tagline: "Global Reach, Local Support",
     title: "Supplying Excellence Worldwide",
     desc: "With a global footprint, we provide premium equipment and dedicated support to the oil & gas industry.",
@@ -25,7 +28,7 @@ const slides = [
   },
   {
     id: 3,
-    image: hero.src,
+    image: hero2.src,
     tagline: "Innovation & Reliability",
     title: "Engineering the Future of Energy",
     desc: "Our innovative products and solutions ensure efficiency, safety, and sustainability in energy operations.",
@@ -46,7 +49,7 @@ export default function Hero() {
   const slide = slides[current];
 
   return (
-    <section className="relative grid min-h-screen place-content-center overflow-hidden text-gray-200 mt-5">
+    <section className="relative grid min-h-screen place-content-center overflow-hidden text-gray-200 mt-3">
       {/* Background image slider */}
       <AnimatePresence mode="wait">
         <motion.div
@@ -84,7 +87,7 @@ export default function Hero() {
           animate={{ opacity: 1, y: 0 }}
           exit={{ opacity: 0, y: -20 }}
           transition={{ duration: 0.8 }}
-          className="mb-4 inline-block rounded-full bg-gray-700/50 px-4 py-1.5 text-sm tracking-wide"
+          className="mb-2 inline-block rounded-full bg-gray-700/50 px-4 py-1.5 text-sm tracking-wide"
         >
           {slide.tagline}
         </motion.span>

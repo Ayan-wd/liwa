@@ -52,25 +52,25 @@ function FooterContent() {
 				</h6>
 				<ul className="list-unstyled mb-0 small">
 					<li className="mb-2 d-flex align-items-center gap-2">
-						<Phone size={16} className="text-secondary" />
+						<Phone size={16} className="text-secondary text-white" />
 						<a href="tel:+971543931009" className="text-decoration-none text-white fw-medium">
 							+971 54 393 1009
 						</a>
 					</li>
 					<li className="mb-2 d-flex align-items-center gap-2">
-						<Phone size={16} className="text-secondary" />
+						<Phone size={16} className="text-secondary text-white" />
 						<a href="tel:+971501681993" className="text-decoration-none text-white fw-medium">
 							+971 50 168 1993
 						</a>
 					</li>
 					<li className="mb-2 d-flex align-items-center gap-2">
-						<Mail size={16} className="text-secondary" />
+						<Mail size={16} className="text-secondary text-white" />
 						<a href="mailto:sales@liwaindustries.com" className="text-decoration-none text-white fw-medium">
 							sales@liwaindustries.com
 						</a>
 					</li>
 					<li className="d-flex align-items-center gap-2">
-						<Mail size={16} className="text-secondary" />
+						<Mail size={16} className="text-secondarytext-white" />
 						<a href="mailto:admin@liwaindustries.com" className="text-decoration-none text-white fw-medium">
 							admin@liwaindustries.com
 						</a>

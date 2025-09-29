@@ -1,6 +1,5 @@
 "use client";
 import About from "@/components/home-one/about";
-import AutoSlider from "@/components/home-one/auto-slider";
 import Hero from "@/components/home-one/hero";
 import Projects from "@/components/home-one/projects";
 import Services from "@/components/home-one/services";
