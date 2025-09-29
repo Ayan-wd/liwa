@@ -25,6 +25,7 @@ import Header from "@/components/home-one/header";
 import "../../public/css/app.css";
 import "../../public/css/main.css";
 import "../../public/css/mobile-nav.css";
+import WhatsAppButton from "@/components/common/Whatsappbutton";
 
 export const metadata = {
 	title: "Liwa Industries || Oilfield Equipment & Industrial Solutions",
@@ -41,6 +42,7 @@ export default function HomeOneLayout({ children }) {
 				<ImportBsJS />
 				<Header />
 				{children}
+				<WhatsAppButton/>
 				<Footer />
 			</body>
 		</html>
