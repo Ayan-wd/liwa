@@ -3,7 +3,7 @@ import { title } from "process";
 export const menuItemsData = [
 	{
 		title: "Home",
-		url: "#",
+		url: "/",
 	},
 	{
 		title: "About Us",
@@ -11,7 +11,7 @@ export const menuItemsData = [
 	},
 	{
 		title: "Services",
-		url: "service",
+		url: "services",
 	},
 		{
 		title: "Our Projects",
