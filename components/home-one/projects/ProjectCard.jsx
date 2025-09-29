@@ -1,6 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
-import { FaArrowRight } from "react-icons/fa"; // ✅ React Icon
+
 
 function ProjectCard({ project: { title, description, img } }) {
   return (
@@ -16,7 +16,7 @@ function ProjectCard({ project: { title, description, img } }) {
       </div>
       <div className="card-body p-4 d-flex flex-column justify-content-between">
         <div>
-          <Link href="/single-portfolio" className="text-decoration-none">
+          <Link href="/our-projects" className="text-decoration-none">
             <h5 className="fw-semibold text-dark">{title}</h5>
           </Link>
           <p className="text-muted small mb-0">{description}</p>
