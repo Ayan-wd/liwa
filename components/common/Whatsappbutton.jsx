@@ -11,7 +11,6 @@ export default function WhatsAppButton() {
         className="flex items-center gap-2 bg-green-500 text-white px-4 py-3 rounded-full shadow-lg hover:bg-green-600 transition-all"
       >
         <FaWhatsapp size={22} />
-        Chat on WhatsApp
       </Link>
     </div>
   );

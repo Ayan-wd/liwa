@@ -16,7 +16,7 @@ function Header() {
       className="site-header aximo-header-section aximo-header shadow-sm fixed-top"
       id="sticky-menu"
       style={{
-        backgroundColor: "rgba(255, 255, 255, 0.9)", // same as after scroll
+        backgroundColor: "#EDE8D0", // same as after scroll
       }}
     >
       <div className="container">

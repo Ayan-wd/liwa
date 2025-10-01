@@ -1,76 +1,76 @@
+"use client";
+
 import { Phone, Mail, MapPin } from "lucide-react";
 import { FadeInStaggerTwo, FadeInStaggerTwoChildren } from "../animation/FadeInStaggerTwo";
 
 function ContactInfo() {
   return (
-    <div className="aximo-contact-info-section">
-      <div className="container">
-        <div className="aximo-contact-info-title">
-          <h2>
-            <span className="display-3 mb-4 mb-md-5 text-center text-black">
-              Contact Information
-            </span>
+    <section className="py-16 bg-white dark:bg-gray-900">
+      <div className="container mx-auto px-4">
+        {/* Title */}
+        <div className="text-center mb-12">
+          <h2 className="text-3xl md:text-4xl font-bold text-gray-900 dark:text-white">
+            Contact Information
           </h2>
         </div>
-        <FadeInStaggerTwo className="row">
+
+        {/* Info Grid */}
+        <FadeInStaggerTwo className="grid grid-cols-1 md:grid-cols-3 gap-8 items-stretch">
           {/* Phone */}
-          <FadeInStaggerTwoChildren className="col-xl-6 col-md-6">
-            <div className="aximo-contact-info-box d-flex align-items-start">
-              <div className="aximo-contact-info-icon me-3">
-                <Phone size={28} strokeWidth={1.8} className="text-primary" />
-              </div>
-              <div className="aximo-contact-info-data text-black">
-                <span className="fw-bold">Call us</span>
-                <p className="mb-0">+971 54 393 1009</p>
-                <p className="mb-0">+971 50 168 1993</p>
+          <FadeInStaggerTwoChildren>
+            <div className="relative cursor-pointer h-full">
+              <span className="absolute top-0 left-0 w-full h-full mt-1 ml-1 bg-indigo-500 rounded-lg dark:bg-gray-200"></span>
+              <div className="relative h-full flex flex-col justify-between p-6 bg-white dark:bg-gray-800 border-2 border-indigo-500 dark:border-gray-300 rounded-lg transition duration-500 hover:scale-105">
+                <div className="flex items-start gap-4">
+                  <Phone size={32} strokeWidth={1.8} className="text-blue-600 dark:text-indigo-400" />
+                  <div>
+                    <h3 className="text-lg font-bold text-gray-800 dark:text-white">Call us</h3>
+                    <p className="text-gray-600 dark:text-gray-300">+971 54 393 1009</p>
+                    <p className="text-gray-600 dark:text-gray-300">+971 50 168 1993</p>
+                  </div>
+                </div>
               </div>
             </div>
           </FadeInStaggerTwoChildren>
 
           {/* Email */}
-          <FadeInStaggerTwoChildren className="col-xl-6 col-md-6">
-            <div className="aximo-contact-info-box d-flex align-items-start">
-              <div className="aximo-contact-info-icon me-3">
-                <Mail size={28} strokeWidth={1.8} className="text-danger" />
-              </div>
-              <div className="aximo-contact-info-data text-black">
-                <span className="fw-bold">Email us</span>
-                <p className="mb-0">sales@liwaeindutries.com</p>
-                <p className="mb-0">admin@liwaindustries.com</p>
-              </div>
-            </div>
-          </FadeInStaggerTwoChildren>
-
-          {/* Address 1 */}
-          <FadeInStaggerTwoChildren className="col-xl-6 col-md-6">
-            <div className="aximo-contact-info-box d-flex align-items-start">
-              <div className="aximo-contact-info-icon me-3">
-                <MapPin size={28} strokeWidth={1.8} className="text-success" />
-              </div>
-              <div className="aximo-contact-info-data text-black">
-                <span className="fw-bold">Office address</span>
-                <p className="mb-0">Office 510, Mai Tower Al Nahda - Dubai UAE</p>
+          <FadeInStaggerTwoChildren>
+            <div className="relative cursor-pointer h-full">
+              <span className="absolute top-0 left-0 w-full h-full mt-1 ml-1 bg-red-500 rounded-lg dark:bg-gray-200"></span>
+              <div className="relative h-full flex flex-col justify-between p-6 bg-white dark:bg-gray-800 border-2 border-red-500 dark:border-gray-300 rounded-lg transition duration-500 hover:scale-105">
+                <div className="flex items-start gap-4">
+                  <Mail size={32} strokeWidth={1.8} className="text-red-600 dark:text-red-400" />
+                  <div>
+                    <h3 className="text-lg font-bold text-gray-800 dark:text-white">Email us</h3>
+                    <p className="text-gray-600 dark:text-gray-300">sales@liwaindustries.com</p>
+                    <p className="text-gray-600 dark:text-gray-300">admin@liwaindustries.com</p>
+                  </div>
+                </div>
               </div>
             </div>
           </FadeInStaggerTwoChildren>
 
-          {/* Address 2 */}
-          <FadeInStaggerTwoChildren className="col-xl-6 col-md-6">
-            <div className="aximo-contact-info-box d-flex align-items-start">
-              <div className="aximo-contact-info-icon me-3">
-                <MapPin size={28} strokeWidth={1.8} className="text-success" />
-              </div>
-              <div className="aximo-contact-info-data text-black">
-                <span className="fw-bold">Office address</span>
-                <p className="mb-0">F0AM0781 Al Hamra Industrial Zone FZE - RAK - UAE</p>
+          {/* Address */}
+          <FadeInStaggerTwoChildren>
+            <div className="relative cursor-pointer h-full">
+              <span className="absolute top-0 left-0 w-full h-full mt-1 ml-1 bg-green-500 rounded-lg dark:bg-gray-200"></span>
+              <div className="relative h-full flex flex-col justify-between p-6 bg-white dark:bg-gray-800 border-2 border-green-500 dark:border-gray-300 rounded-lg transition duration-500 hover:scale-105">
+                <div className="flex items-start gap-4">
+                  <MapPin size={32} strokeWidth={1.8} className="text-green-600 dark:text-green-400" />
+                  <div>
+                    <h3 className="text-lg font-bold text-gray-800 dark:text-white">Office address</h3>
+                    <p className="text-gray-600 dark:text-gray-300">
+                      FOAM0781, Compass Building, Al Shohada Road, AL Hamra Industrial Zone-FZ, Ras Al Khaimah, United Arab Emirates
+                    </p>
+                  </div>
+                </div>
               </div>
             </div>
           </FadeInStaggerTwoChildren>
         </FadeInStaggerTwo>
       </div>
-    </div>
+    </section>
   );
 }
 
 export default ContactInfo;
-																											

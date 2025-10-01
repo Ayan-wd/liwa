@@ -69,7 +69,7 @@ export default function Hero() {
 
       <div
         className="position-absolute top-0 start-0 w-100 h-100"
-        style={{ backgroundColor: "rgba(0,0,0,0.7)" }} // 50% black
+        style={{ backgroundColor: "rgba(0,0,0,0.6)" }} // 50% black
       ></div>
 
       {/* Stars overlay */}

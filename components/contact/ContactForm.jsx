@@ -1,143 +1,170 @@
 "use client";
-import { useState } from "react";
-import emailjs from "emailjs-com";
- import 'tailwindcss/tailwind.css'
-export default function ContactForm() {
-  const [loading, setLoading] = useState(false);
-  const [message, setMessage] = useState("");
 
-  const sendEmail = (e) => {
+import { useState } from "react";
+import emailjs from "@emailjs/browser";
+
+export default function ContactForm() {
+  const [formData, setFormData] = useState({
+    fullName: "",
+    email: "",
+    mobileNumber: "",
+    message: "",
+  });
+
+  const [loading, setLoading] = useState(false);
+  const [successMsg, setSuccessMsg] = useState("");
+  const [errorMsg, setErrorMsg] = useState("");
+
+  // Handle input changes
+  const handleChange = (e) => {
+    setFormData({ ...formData, [e.target.name]: e.target.value });
+  };
+
+  // Handle form submit
+  const handleSubmit = (e) => {
     e.preventDefault();
     setLoading(true);
-    setMessage("");
+    setSuccessMsg("");
+    setErrorMsg("");
 
     emailjs
-      .sendForm(
-        "YOUR_SERVICE_ID", // 🔹 replace
-        "YOUR_TEMPLATE_ID", // 🔹 replace
-        e.target,
-        "YOUR_PUBLIC_KEY" // 🔹 replace
+      .send(
+        process.env.NEXT_PUBLIC_EMAILJS_SERVICE_ID,
+        process.env.NEXT_PUBLIC_EMAILJS_TEMPLATE_ID,
+        formData,
+        process.env.NEXT_PUBLIC_EMAILJS_PUBLIC_KEY
       )
       .then(
         () => {
-          setLoading(false);
-          setMessage("✅ Message sent successfully!");
-          e.target.reset();
+          setSuccessMsg("✅ Your message has been sent successfully!");
+          setFormData({
+            fullName: "",
+            email: "",
+            mobileNumber: "",
+            message: "",
+          });
         },
-        (error) => {
-          setLoading(false);
-          setMessage("❌ Failed to send message. Try again later.");
-          console.error(error);
+        () => {
+          setErrorMsg("❌ Failed to send message. Please try again.");
         }
-      );
+      )
+      .finally(() => setLoading(false));
   };
 
   return (
-    <section className="min-h-screen bg-gray-50 flex items-center justify-center  py-12">
-      <div className="w-full max-w-6xl bg-white shadow-xl rounded-2xl p-8 md:p-12">
-        {/* Heading */}
-        <div className="text-center mb-8">
-          <h3 className="text-sm uppercase text-blue-600 font-semibold">
-            Get in Touch
-          </h3>
-          <h2 className="text-3xl md:text-4xl  text-gray-800 mt-2">
-            We're always ready to work with new clients
-          </h2>
-          <p className="text-gray-500 mt-3">
-            Fill out the form below and we’ll get back to you within 24 hours.
-          </p>
+    <section className="relative max-w-7xl mx-auto px-4 py-16 ">
+      {/* Header */}
+      <div className="text-center mb-12">
+        <h3 className="text-lg uppercase text-blue-600 font-semibold">
+          Get in Touch
+        </h3>
+        <div className="w-20 h-1 bg-[#EDE8D0] mx-auto mb-6"></div>
+        <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+          Have questions or need assistance? Fill out the form below and our team will get back to you shortly.
+        </p>
+      </div>
+
+      {/* Form Section */}
+      <div className="bg-white rounded-xl shadow-2xl overflow-hidden" >
+        <div className="md:flex" >
+          {/* Left Info Panel */}
+          <div className="md:w-1/3 p-10 text-gray-800 flex flex-col justify-between" style={{ backgroundColor: "#EDE8D0" }}>
+            <div>
+              <h2 className="text-2xl font-bold mb-4 text-black">Why Contact Us?</h2>
+              <ul className="space-y-4">
+                <li className="flex items-start">
+                  <span className="mr-2">📞</span>
+                  Quick response to your queries
+                </li>
+                <li className="flex items-start">
+                  <span className="mr-2">💬</span>
+                  Friendly support team
+                </li>
+                <li className="flex items-start">
+                  <span className="mr-2">📧</span>
+                  Assistance via email or phone
+                </li>
+              </ul>
+            </div>
+            <div className="mt-8">
+              <h3 className="text-lg font-semibold mb-2 text-black">Need immediate assistance?</h3>
+              <p className="text-gray-700 mb-2">Call us at +91 7307xxxxxx</p>
+              <p className="text-sm text-gray-600">Our team is available 10AM - 6PM, Monday to Saturday</p>
+            </div>
+          </div>
+
+          {/* Right Form */}
+          <div className="md:w-2/3 p-10">
+            <form onSubmit={handleSubmit} className="space-y-6">
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <div>
+                  <label className="block text-sm font-medium text-gray-700 mb-1">Full Name</label>
+                  <input
+                    type="text"
+                    name="fullName"
+                    value={formData.fullName}
+                    onChange={handleChange}
+                    placeholder="John Doe"
+                    className="w-full px-4 py-3 border border-gray-300 rounded-lg shadow-sm focus:ring-[#EDE8D0] focus:border-[#EDE8D0]"
+                    required
+                  />
+                </div>
+                <div>
+                  <label className="block text-sm font-medium text-gray-700 mb-1">Email Address</label>
+                  <input
+                    type="email"
+                    name="email"
+                    value={formData.email}
+                    onChange={handleChange}
+                    placeholder="john@example.com"
+                    className="w-full px-4 py-3 border border-gray-300 rounded-lg shadow-sm focus:ring-[#EDE8D0] focus:border-[#EDE8D0]"
+                    required
+                  />
+                </div>
+                <div>
+                  <label className="block text-sm font-medium text-gray-700 mb-1">Mobile Number</label>
+                  <input
+                    type="tel"
+                    name="mobileNumber"
+                    value={formData.mobileNumber}
+                    onChange={handleChange}
+                    placeholder="+91 9876543210"
+                    className="w-full px-4 py-3 border border-gray-300 rounded-lg shadow-sm focus:ring-[#EDE8D0] focus:border-[#EDE8D0]"
+                    required
+                  />
+                </div>
+              </div>
+
+              <div>
+                <label className="block text-sm font-medium text-gray-700 mb-1">Your Message</label>
+                <textarea
+                  name="message"
+                  rows="4"
+                  value={formData.message}
+                  onChange={handleChange}
+                  placeholder="Write your message here..."
+                  className="w-full px-4 py-3 border border-gray-300 rounded-lg shadow-sm focus:ring-[#EDE8D0] focus:border-[#EDE8D0]"
+                  required
+                />
+              </div>
+
+              <div>
+                <button
+                  type="submit"
+                  disabled={loading}
+                  className="w-full py-3 px-6] text-gray-800 font-medium rounded-full shadow-sm  transition duration-300"
+                  style={{ backgroundColor: "#EDE8D0" }}
+                >
+                  {loading ? "Sending..." : "Send Message"}
+                </button>
+              </div>
+
+              {/* Status Messages */}
+              {successMsg && <p className="text-green-600">{successMsg}</p>}
+              {errorMsg && <p className="text-red-600">{errorMsg}</p>}
+            </form>
+          </div>
         </div>
-
-        {/* Form */}
-        <form onSubmit={sendEmail} className="grid gap-6">
-          {/* Full Name */}
-          <div>
-            <label className="block text-gray-700 font-medium mb-2">
-              Full Name <span className="text-red-500">*</span>
-            </label>
-            <input
-              type="text"
-              name="fullname"
-              required
-              className="w-full px-4 py-3 border border-black-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:outline-none"
-              placeholder="John Doe"
-            />
-          </div>
-
-          {/* Email & Phone */}
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-            <div>
-              <label className="block text-gray-700 font-medium mb-2">
-                Email <span className="text-red-500">*</span>
-              </label>
-              <input
-                type="email"
-                name="email"
-                required
-                className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:outline-none"
-                placeholder="johndoe@example.com"
-              />
-            </div>
-
-            <div>
-              <label className="block text-gray-700 font-medium mb-2">
-                Phone
-              </label>
-              <input
-                type="tel"
-                name="phone"
-                className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:outline-none"
-                placeholder="+92 300 1234567"
-              />
-            </div>
-          </div>
-
-          {/* Subject */}
-          <div>
-            <label className="block text-gray-700 font-medium mb-2">
-              Subject <span className="text-red-500">*</span>
-            </label>
-            <input
-              type="text"
-              name="subject"
-              required
-              className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:outline-none"
-              placeholder="Project Inquiry"
-            />
-          </div>
-
-          {/* Message */}
-          <div>
-            <label className="block text-gray-700 font-medium mb-2">
-              Message <span className="text-red-500">*</span>
-            </label>
-            <textarea
-              name="message"
-              rows="5"
-              required
-              className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:outline-none"
-              placeholder="Write your message here..."
-            />
-          </div>
-
-          {/* Submit Button */}
-          <div className="flex justify-center">
-            <button
-              type="submit"
-              disabled={loading}
-              className="w-full md:w-auto px-8 py-3 bg-blue-600 text-white font-semibold rounded-lg shadow-md hover:bg-blue-700 transition"
-            >
-              {loading ? "Sending..." : "Send Message"}
-            </button>
-          </div>
-        </form>
-
-        {/* Status Message */}
-        {message && (
-          <p className="text-center mt-6 text-sm font-medium text-gray-700">
-            {message}
-          </p>
-        )}
       </div>
     </section>
   );

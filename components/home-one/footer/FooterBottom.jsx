@@ -20,7 +20,7 @@ function FooterBottom() {
         </Link>
       </div>
       <div className="col-md-6 text-center text-md-end">
-        <p className="mb-0 small text-white-50">
+        <p className="mb-0 small text-dark">
           &copy; {year} Liwa Industries. All rights reserved.
         </p>
       </div>
