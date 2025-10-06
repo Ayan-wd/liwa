@@ -4,7 +4,7 @@ import"../../../globals.css";
 
 function ServiceCard({ service: { title, description, icon: Icon, slug } }) {
   return (
-    <div className="card service-card border border-2 border-dark rounded-4 h-100 bg-transparent">
+    <div className="card service-card border border-dark rounded-4 h-100 bg-transparent">
       <Link
         href={slug ? `/services/${slug}` : `/single-service`}
         className="d-flex flex-column h-100 text-decoration-none p-4"

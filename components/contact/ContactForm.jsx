@@ -88,7 +88,7 @@ export default function ContactForm() {
             </div>
             <div className="mt-8">
               <h3 className="text-lg font-semibold mb-2 text-black">Need immediate assistance?</h3>
-              <p className="text-gray-700 mb-2">Call us at +91 7307xxxxxx</p>
+              <p className="text-gray-700 mb-2">Call us at +971 54 393 1009 /  <span>+971 50 168 1993</span></p>
               <p className="text-sm text-gray-600">Our team is available 10AM - 6PM, Monday to Saturday</p>
             </div>
           </div>
@@ -136,14 +136,14 @@ export default function ContactForm() {
               </div>
 
               <div>
-                <label className="block text-sm font-medium text-gray-700 mb-1">Your Message</label>
+                <label className="block text-sm font-medium text-black mb-1">Your Message</label>
                 <textarea
                   name="message"
                   rows="4"
                   value={formData.message}
                   onChange={handleChange}
                   placeholder="Write your message here..."
-                  className="w-full px-4 py-3 border border-gray-300 rounded-lg shadow-sm focus:ring-[#EDE8D0] focus:border-[#EDE8D0]"
+                  className="w-full px-4 py-3 border text-black border-gray-300 rounded-lg shadow-sm focus:ring-[#EDE8D0] focus:border-[#EDE8D0]"
                   required
                 />
               </div>

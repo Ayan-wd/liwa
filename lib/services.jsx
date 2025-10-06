@@ -1,10 +1,11 @@
-import CustomAlloys from "../public/images/service/servicesdetail/custom-alloys-metal-ingots.jpg";
-import FlangesFittings from "../public/images/service/servicesdetail/steel-flanges-and-fittings.jpg";
-import Procurement from "../public/images/service/servicesdetail/global-procurement-supply-chain.jpg";
-import Oilfeild from "../public/images/service/servicesdetail/oilfield-equipment-industrial-banner.jpg";
-import PipingSolutions from "../public/images/service/servicesdetail/industrial-piping-bundle.jpg";
-import Gasketsealing from "../public/images/service/servicesdetail/industrial-gaskets-sealing-solutions.jpg";
-
+import CustomAlloys from "../public/images/service/servicesdetail/CUSTOM-GRADES -ALLOYS.jpg";
+import FlangesFittings from "../public/images/service/servicesdetail/FLANGES-SPECTACLES.jpg";
+import Procurement from "../public/images/service/servicesdetail/INDUSTRY-SPECIFICEXPERTISE.jpg";
+import IndustrialValves from "../public/images/service/servicesdetail/industrialvalves.jpg";
+import BwForged from "../public/images/service/servicesdetail/BW-FORGED-FITTINGS.jpg";
+import Olets from "../public/images/service/servicesdetail/O’LETS.jpg";
+import Compressionfitting from "../public/images/service/servicesdetail/COMPRESSION-FITTINGS.jpg";
+import PipeCasing from "../public/images/service/servicesdetail/PIPES-CASING.jpg";
 export const services = [
   {
     slug: "industrial-valves",
@@ -12,7 +13,7 @@ export const services = [
     excerpt:
       "High-quality valves engineered for safe and reliable flow control in oil, gas, and industrial applications.",
     icon: "icon-valve",
-    heroImage: Oilfeild,
+    heroImage: IndustrialValves,
     sections: [
       {
         heading: "Overview",
@@ -66,7 +67,7 @@ export const services = [
     excerpt:
       "Durable butt-weld and forged fittings designed for secure and long-lasting pipeline connections.",
     icon: "icon-pipe-connection",
-    heroImage: PipingSolutions,
+    heroImage: BwForged,
     sections: [
       {
         heading: "Overview",
@@ -88,7 +89,7 @@ export const services = [
     excerpt:
       "Versatile branch connection fittings ensuring strength, safety, and reliability in piping systems.",
     icon: "icon-branch",
-    heroImage: PipingSolutions,
+    heroImage: Olets,
     sections: [
       {
         heading: "Overview",
@@ -111,7 +112,7 @@ export const services = [
     excerpt:
       "Seamless and welded pipes & casings manufactured to global standards for oilfield and industrial applications.",
     icon: "icon-pipe",
-    heroImage: PipingSolutions,
+    heroImage: PipeCasing,
     sections: [
       {
         heading: "Overview",
@@ -133,7 +134,7 @@ export const services = [
     excerpt:
       "Reliable compression fittings delivering secure, leak-proof connections for piping and tubing systems.",
     icon: "icon-fitting",
-    heroImage: Gasketsealing,
+    heroImage: Compressionfitting,
     sections: [
       {
         heading: "Overview",
