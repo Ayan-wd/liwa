@@ -1,7 +1,7 @@
 function StoryContent() {
 	return (
 		<div className="row">
-			<div className="col-lg-6">
+			<div className="col-lg-6 text-justify">
 				<h3 className="display-5 mb-4 mb-md-5 text-left text-black">Our Vision</h3>
 				<p>
 					To be a global leader in delivering reliable oilfield equipment,
@@ -14,7 +14,7 @@ function StoryContent() {
 					efficient and sustainable future.
 				</p>
 			</div>
-			<div className="col-lg-6">
+			<div className="col-lg-6 text-justify">
 				<h3 className="display-5 mb-4 mb-md-5 text-left text-black">Our Mission</h3>
 				<p>
 					To provide high-quality industrial products and procurement

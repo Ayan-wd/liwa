@@ -11,7 +11,7 @@ function Story() {
 						<span className="aximo-title-animation">Our story</span> is built on reliability &amp; trust
 
 					</h2>
-					<p>
+					<p className="text-justify">
 						Established to serve the oil &amp; gas industry, Liwa Industries has
 						grown into a premier supplier of high-quality oilfield equipment.
 						With industry-specific expertise and a commitment to excellence,

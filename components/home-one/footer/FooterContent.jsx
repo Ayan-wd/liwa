@@ -9,7 +9,7 @@ function FooterContent() {
 				<h2 className="h5 text-dark fw-semibold mb-3 text-balance">
 					Let’s build success together
 				</h2>
-				<p className="text-dark small mb-0">
+				<p className="text-dark small mb-0 text-justify">
 					Liwa Industries is your trusted partner in global energy supplies.
 					We deliver high-quality oilfield equipment, custom alloys, and
 					industrial solutions with excellence and reliability.
@@ -84,8 +84,8 @@ function FooterContent() {
 					Visit Us
 				</h6>
 				<p className="text-dark-50 small mb-3 d-flex gap-2">
-					<MapPin size={16} className="text-secondary mt-1" />
-					<span className="text-dark">
+					<MapPin size={16} className="text-secondary mt-1 " />
+					<span className="text-dark text-justify">
 						FOAM0781, Compass Building, Al Shohada Road, AL Hamra Industrial Zone-FZ, Ras Al Khaimah, United Arab Emirates
 					</span>
 				</p>

@@ -19,7 +19,7 @@ function About() {
 								Global Energy Supplies
 							</h2>
 						</div>
-						<div className="col-lg-4 offset-lg-1 d-flex align-items-center">
+						<div className="col-lg-4 offset-lg-1 d-flex align-items-center text-justify">
 							<p>
 								Liwa Industrial Equipment FZ LLC is a premier supplier of
 								high-quality oilfield equipment. With deep industry knowledge,

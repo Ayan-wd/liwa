@@ -34,7 +34,7 @@ function Accordion() {
 					className={`accordion-collapse collapse ${open === "collapseOne" ? "show" : ""}`}
 					data-bs-parent="#aximo-accordion"
 				>
-					<div className="accordion-body text-white">
+					<div className="accordion-body text-white text-justify">
 						We work closely with clients to understand their specific project
 						needs, technical specifications, and industry standards.
 					</div>
@@ -63,7 +63,7 @@ function Accordion() {
 					className={`accordion-collapse collapse ${open === "collapseTwo" ? "show" : ""}`}
 					data-bs-parent="#aximo-accordion"
 				>
-					<div className="accordion-body text-white">
+					<div className="accordion-body text-white text-justify">
 						Our extensive inventory of valves, flanges, fittings, and pipes
 						ensures rapid availability of high-quality products for urgent and
 						planned requirements.
@@ -93,7 +93,7 @@ function Accordion() {
 					className={`accordion-collapse collapse ${open === "collapseThree" ? "show" : ""}`}
 					data-bs-parent="#aximo-accordion"
 				>
-					<div className="accordion-body text-white">
+					<div className="accordion-body text-white text-justify">
 						We guarantee timely delivery and provide ongoing support to ensure
 						safe, efficient, and reliable operations for our clients worldwide.
 					</div>

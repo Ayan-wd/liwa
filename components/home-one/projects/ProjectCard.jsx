@@ -19,7 +19,7 @@ function ProjectCard({ project: { title, description, img } }) {
           <Link href="/our-projects" className="text-decoration-none">
             <h5 className="fw-semibold text-dark">{title}</h5>
           </Link>
-          <p className="text-muted small mb-0">{description}</p>
+          <p className="text-muted small mb-0 text-justify">{description}</p>
         </div>
       </div>
     </div>

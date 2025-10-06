@@ -3,7 +3,7 @@ import Image from "next/image";
 
 function Content() {
 	return (
-		<div className="aximo-default-content">
+		<div className="aximo-default-content text-justify">
 			<h3 className="text-sm uppercase text-blue-600 font-semibold text center">
 				Why Choose Us
 			</h3>

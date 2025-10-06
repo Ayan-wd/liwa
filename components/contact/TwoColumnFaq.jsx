@@ -39,7 +39,7 @@ const faqData = {
 
 function TwoColumnFaq() {
   return (
-    <div className="section aximo-section-padding bg-gray-50">
+    <div className="section aximo-section-padding bg-gray-50 text-justify">
       <div className="container">
         {/* Section Title */}
         <div className="aximo-section-title text-center mb-12 ">
