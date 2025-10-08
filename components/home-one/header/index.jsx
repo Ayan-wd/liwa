@@ -1,6 +1,8 @@
 "use client";
 import DesktopNav from "@/components/common/navigation/desktop-nav/DesktopNav";
 import NavItem from "@/components/common/navigation/desktop-nav/NavItem";
+import DropdownItem from "@/components/common/navigation/desktop-nav/DropdownItem";
+import { getAllServices } from "@/lib/services";
 import MobileNavbar from "@/components/common/navigation/mobile-nav/MobileNavbar";
 import { menuItemsData } from "@/components/common/navigation/mobile-nav/menuItemsData";
 import HeaderButton from "./HeaderButton";
@@ -30,8 +32,15 @@ function Header() {
               <NavItem url="about-us" className={navLinkClass}>
                 About Us
               </NavItem>
-              <NavItem url="services" className={navLinkClass}>
-                Services
+              {/* Products dropdown populated from services data */}
+              <NavItem dropdown title="Products" className={navLinkClass}>
+                <ul className="sub-menu">
+                  {getAllServices().map((s) => (
+                    <DropdownItem key={s.slug} url={`services/${s.slug}`}>
+                      {s.title}
+                    </DropdownItem>
+                  ))}
+                </ul>
               </NavItem>
               <NavItem url="our-projects" className={navLinkClass}>
                 Projects

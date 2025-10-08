@@ -24,7 +24,7 @@ const slides = [
     tagline: "Global Reach, Local Support",
     title: "Supplying Excellence Worldwide",
     desc: "With a global footprint, we provide premium equipment and dedicated support to the oil & gas industry.",
-    cta: "Explore Services",
+    cta: "Explore Products",
   },
   {
     id: 3,

@@ -8,7 +8,7 @@ function Services({ services }) {
 				{/* Section title */}
 				<div className="display-5 mb-4 mb-md-5 text-center text-black">
 					<h3 className="text-sm uppercase text-blue-600 font-semibold">
-						Our Services
+						Our Products
 					</h3>
 					<h2 className="display-3 mb-4 mb-md-2 text-center text-black">
 						We deliver reliable{" "}

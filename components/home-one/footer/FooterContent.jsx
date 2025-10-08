@@ -34,7 +34,7 @@ function FooterContent() {
 					</li>
 					<li className="mb-2">
 						<Link href="/services" className="text-decoration-none text-dark fw-medium">
-							Services
+							Products
 						</Link>
 					</li>
 					<li>

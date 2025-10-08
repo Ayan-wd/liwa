@@ -21,7 +21,7 @@ const services = getAllServices().map((s) => ({
 function ServicePage() {
   return (
     <>
-      <BreadCrumb title="Services" backgroundImage={servicesbanner.src} />
+      <BreadCrumb title="Products" backgroundImage={servicesbanner.src} />
       <Services services={services} />
       <WhyChooseUs />
       <TwoColumnFaq />

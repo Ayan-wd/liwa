@@ -43,3 +43,44 @@
   -webkit-box-orient: vertical;
   overflow: hidden;
 }
+
+/* Nav hover enhancements (desktop only) */
+@media (min-width: 992px) {
+  .site-menu-main .nav-link-item {
+    transition: color .18s ease, background-color .18s ease, transform .18s ease;
+    padding: .45rem .65rem; /* ensure hover bg has breathing room */
+    border-radius: .5rem;
+    display: inline-block;
+  }
+
+  .site-menu-main .nav-link-item:hover,
+  .site-menu-main .nav-link-item:focus {
+    color: #0b5ed7; /* bootstrap primary-ish */
+    background-color: rgba(11,93,215,0.06);
+    transform: translateY(-2px);
+    text-decoration: none;
+  }
+
+  /* Dropdown caret rotation on hover */
+  .site-menu-main .nav-item.nav-item-has-children .drop-trigger i {
+    transition: transform .18s ease;
+    display: inline-block;
+  }
+  .site-menu-main .nav-item.nav-item-has-children .drop-trigger:hover i {
+    transform: rotate(180deg);
+  }
+
+  /* Submenu item hover */
+  .site-menu-main .sub-menu--item > a {
+    display: block;
+    padding: .45rem .6rem;
+    transition: background-color .18s ease, color .18s ease, padding-left .12s ease;
+    border-radius: .375rem;
+  }
+  .site-menu-main .sub-menu--item > a:hover,
+  .site-menu-main .sub-menu--item > a:focus {
+    background-color: rgba(11,93,215,0.04);
+    color: #0b5ed7;
+    text-decoration: none;
+  }
+}

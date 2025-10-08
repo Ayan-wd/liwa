@@ -2,6 +2,7 @@
 
 import BreadCrumb from "@/components/common/Breadcrumb"
 import ProjectCard from "@/components/home-one/projects/ProjectCard"
+import { getAllProjects } from "@/lib/projects"
 import Image from "next/image"
 import { motion } from "framer-motion"
 
@@ -18,78 +19,7 @@ import Project10Img from "../../../public/images/v1/projects/sadaf.bmp"
 import projectsbanner from "../../../public/images/v1/projectsbanner.jpg"
 
 export default function ProjectsPage() {
-  const projectsData = [
-    {
-      id: 1,
-      title: "Wasit Gas Plant",
-      description:
-        "A mega gas processing facility by Saudi Aramco, providing clean natural gas for domestic and industrial use.",
-      img: Project1Img,
-    },
-    {
-      id: 2,
-      title: "Fadhili Gas Plant",
-      description:
-        "A state-of-the-art gas plant enhancing Saudi Arabia’s energy sustainability and industrial development.",
-      img: Project2Img,
-    },
-    {
-      id: 3,
-      title: "Sadara Petrochemical Facility",
-      description:
-        "One of the world’s largest integrated chemical complexes, a joint venture between Saudi Aramco and Dow.",
-      img: Project3Img,
-    },
-    {
-      id: 4,
-      title: "Manifa Project",
-      description:
-        "A pioneering offshore oilfield project built with innovative causeway and drilling technologies.",
-      img: Project4Img,
-    },
-    {
-      id: 5,
-      title: "Karan Gas Plant",
-      description:
-        "The first non-associated gas field development project by Saudi Aramco, boosting domestic gas supply.",
-      img: Project5Img,
-    },
-    {
-      id: 6,
-      title: "Petrokemya",
-      description:
-        "A SABIC affiliate producing a wide range of petrochemical products supporting global industries.",
-      img: Project6Img,
-    },
-    {
-      id: 7,
-      title: "Kemya",
-      description:
-        "A joint venture between SABIC and ExxonMobil specializing in elastomers and petrochemical products.",
-      img: Project7Img,
-    },
-    {
-      id: 8,
-      title: "Hadeed",
-      description:
-        "SABIC’s steel manufacturing affiliate producing long and flat steel products for infrastructure projects.",
-      img: Project8Img,
-    },
-    {
-      id: 9,
-      title: "Sharq",
-      description:
-        "One of SABIC’s joint ventures producing ethylene, polyethylene, and ethylene glycol at a massive scale.",
-      img: Project9Img,
-    },
-    {
-      id: 10,
-      title: "Sadaf",
-      description:
-        "A SABIC joint venture producing styrene and MTBE, strengthening petrochemical capabilities.",
-      img: Project10Img,
-    },
-  ]
+  const projectsData = getAllProjects()
 
   return (
     <>
@@ -129,7 +59,7 @@ export default function ProjectsPage() {
             whileInView="visible"
             viewport={{ once: true }}
             transition={{ staggerChildren: 0.1 }}
-            className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8"
+            className="grid grid-cols-1 md:grid-cols-4 sm:grid-cols-2 lg:grid-cols-3 gap-8"
           >
             {projectsData.map((project) => (
               <motion.div

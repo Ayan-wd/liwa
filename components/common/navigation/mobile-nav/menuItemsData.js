@@ -1,4 +1,4 @@
-import { title } from "process";
+import { getAllServices } from "@/lib/services";
 
 export const menuItemsData = [
 	{
@@ -9,11 +9,13 @@ export const menuItemsData = [
 		title: "About Us",
 		url: "about-us",
 	},
-	{
-		title: "Services",
-		url: "services",
-	},
+	// Products (shows services as submenu on mobile)
 		{
+			title: "Products",
+			url: "services",
+			submenu: getAllServices().map((s) => ({ title: s.title, url: `/services/${s.slug}` })),
+		},
+	{
 		title: "Our Projects",
 		url: "our-projects",
 	},

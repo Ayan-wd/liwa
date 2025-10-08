@@ -13,7 +13,7 @@ export default function ServiceDetailClient({ service }) {
 
   return (
     <>
-      <BreadCrumb title="Services" backgroundImage={servicesbanner.src} />
+      <BreadCrumb title="Products" backgroundImage={servicesbanner.src} />
 
       <main className="py-5" style={{ marginTop: "96px" }}>
         <div className="container">
@@ -27,7 +27,7 @@ export default function ServiceDetailClient({ service }) {
               </li>
               <li className="breadcrumb-item">
                 <Link href="/services" className="text-decoration-none text-secondary">
-                  Services
+                  Products
                 </Link>
               </li>
               <li className="breadcrumb-item active fw-bold text-dark" aria-current="page">
@@ -146,7 +146,7 @@ export default function ServiceDetailClient({ service }) {
           {/* Related Services */}
           <div className="mt-5">
             <h3 className=" mb-4 text-black text-center">
-              Related Services
+              Related Products
             </h3>
             <div className="row  text-justify ">
               {getAllServices()
