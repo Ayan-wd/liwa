@@ -7,20 +7,20 @@ export const menuItemsData = [
 	},
 	{
 		title: "About Us",
-		url: "about-us",
+		url: "/about-us",
 	},
 	// Products (shows services as submenu on mobile)
 		{
 			title: "Products",
-			url: "services",
+			url: "/services",
 			submenu: getAllServices().map((s) => ({ title: s.title, url: `/services/${s.slug}` })),
 		},
 	{
 		title: "Our Projects",
-		url: "our-projects",
+		url: "/our-projects",
 	},
 	{
 		title: "Contact Us",
-		url: "contact-us",
+		url: "/contact-us",
 	},
 ];

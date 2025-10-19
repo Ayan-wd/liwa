@@ -25,13 +25,18 @@ import Header from "@/components/home-one/header";
 import "../../public/css/app.css";
 import "../../public/css/main.css";
 import "../../public/css/mobile-nav.css";
+
 import WhatsAppButton from "@/components/common/Whatsappbutton";
 
 export const metadata = {
-	title: "Liwa Industries || Oilfield Equipment & Industrial Solutions",
-	description:
-		"Liwa Industries is a premier supplier of high-quality oilfield equipment, valves, flanges, fittings, pipes, and custom alloys. Delivering excellence, on time, every time across global energy operations.",
+  metadataBase: new URL("https://liwaindustries.com"),
+  title: {
+    default: "Liwa Industries",
+    template: "%s | Liwa Industries",
+  },
+  description: "Leading provider of industrial solutions and engineering services.",
 };
+
 
 
 export default function HomeOneLayout({ children }) {

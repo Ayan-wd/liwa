@@ -6,17 +6,18 @@ import { getAllProjects } from "@/lib/projects"
 import Image from "next/image"
 import { motion } from "framer-motion"
 
-import Project1Img from "../../../public/images/v1/projects/wasit-gas-plant.jpg"
-import Project2Img from "../../../public/images/v1/projects/fadihi-gas-plant.jpg"
-import Project3Img from "../../../public/images/v1/projects/sadara.jpg"
-import Project4Img from "../../../public/images/v1/projects/manifa.jpeg"
-import Project5Img from "../../../public/images/v1/projects/karan.jpg"
-import Project6Img from "../../../public/images/v1/projects/petrokemya.jpeg"
-import Project7Img from "../../../public/images/v1/projects/sabic.jpg"
-import Project8Img from "../../../public/images/v1/projects/hadeed.jpg"
-import Project9Img from "../../../public/images/v1/projects/sharq.bmp"
-import Project10Img from "../../../public/images/v1/projects/sadaf.bmp"
+// import Project1Img from "../../../public/images/v1/projects/wasit-gas-plant.jpg"
+// import Project2Img from "../../../public/images/v1/projects/fadihi-gas-plant.jpg"
+// import Project3Img from "../../../public/images/v1/projects/sadara.jpg"
+// import Project4Img from "../../../public/images/v1/projects/manifa.jpeg"
+// import Project5Img from "../../../public/images/v1/projects/karan.jpg"
+// import Project6Img from "../../../public/images/v1/projects/petrokemya.jpeg"
+// import Project7Img from "../../../public/images/v1/projects/sabic.jpg"
+// import Project8Img from "../../../public/images/v1/projects/hadeed.jpg"
+// import Project9Img from "../../../public/images/v1/projects/sharq.bmp"
+// import Project10Img from "../../../public/images/v1/projects/sadaf.bmp"
 import projectsbanner from "../../../public/images/v1/projectsbanner.jpg"
+import CallToActionSection from "@/components/common/CTA"
 
 export default function ProjectsPage() {
   const projectsData = getAllProjects()
@@ -42,7 +43,7 @@ export default function ProjectsPage() {
             <h3 className="text-sm uppercase tracking-wide text-blue-600 font-semibold">
               Projects
             </h3>
-            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mt-2">
+            <h2 className="text-3xl md:text-4xl font-medium text-gray-900 mt-2">
               Delivering Excellence{" "}
               <span className="text-blue-600">
                 in Oilfield & Industrial Solutions
@@ -74,6 +75,8 @@ export default function ProjectsPage() {
           </motion.div>
         </div>
       </section>
+      <CallToActionSection />
+
     </>
   )
 }

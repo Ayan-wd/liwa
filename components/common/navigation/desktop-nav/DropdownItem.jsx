@@ -2,7 +2,8 @@
 
 import Link from "next/link";
 function DropdownItem({ dropdown, children, title, url }) {
-	const urlFormated = url !== "/" ? `/${url}` : "/";
+	// Ensure single leading slash for urls and fallback to '/'
+	const urlFormated = !url ? "/" : url.startsWith("/") ? url : `/${url}`;
 	return dropdown ? (
 		<li className="sub-menu--item nav-item-has-children">
 			<a href="#" data-menu-get="h3" className="drop-trigger">

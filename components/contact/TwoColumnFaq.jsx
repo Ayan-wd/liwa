@@ -1,4 +1,7 @@
-import { HelpCircle } from "lucide-react";
+"use client";
+
+import { useState } from "react";
+import { HelpCircle, ChevronDown } from "lucide-react";
 
 const faqData = {
   faq1: [
@@ -37,13 +40,46 @@ const faqData = {
   ],
 };
 
-function TwoColumnFaq() {
+function AccordionItem({ faq, isOpen, onClick }) {
   return (
-    <div className="section aximo-section-padding bg-gray-50 text-justify">
-      <div className="container">
+    <div className="bg-white rounded-2xl shadow-sm border border-gray-200 transition-all duration-200">
+      <button
+        onClick={onClick}
+        className="w-full flex justify-between items-center text-left p-5"
+      >
+        <div className="flex items-start gap-3">
+          <HelpCircle className="text-blue-500 w-6 h-6 mt-1" />
+          <h3 className="text-lg font-semibold text-gray-900">{faq.title}</h3>
+        </div>
+        <ChevronDown
+          className={`w-5 h-5 text-gray-500 transition-transform duration-300 ${
+            isOpen ? "rotate-180 text-blue-600" : ""
+          }`}
+        />
+      </button>
+
+      {isOpen && (
+        <div className="px-14 pb-5 text-gray-600 text-justify animate-fadeIn">
+          {faq.text}
+        </div>
+      )}
+    </div>
+  );
+}
+
+export default function TwoColumnFaq() {
+  const [openId, setOpenId] = useState(null);
+
+  const handleToggle = (id) => {
+    setOpenId(openId === id ? null : id);
+  };
+
+  return (
+    <section className="bg-gray-50 py-20 text-justify">
+      <div className="container mx-auto px-4">
         {/* Section Title */}
-        <div className="aximo-section-title text-center mb-12 ">
-          <h2 className="display-3 mb-4 mb-md-2 text-center text-black">
+        <div className="text-center mb-12">
+          <h2 className="text-3xl md:text-4xl font-bold text-gray-900">
             Frequently Asked Questions
           </h2>
           <p className="text-gray-600 mt-3 max-w-2xl mx-auto">
@@ -52,55 +88,22 @@ function TwoColumnFaq() {
           </p>
         </div>
 
-        {/* FAQ Rows */}
-        <div className="row g-4">
-          {/* Left Column */}
-          <div className="col-lg-6">
-            <div className="d-flex flex-column gap-4">
-              {faqData.faq1.map((faq) => (
-                <div
+        {/* FAQ Grid */}
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+          {[faqData.faq1, faqData.faq2].map((col, colIndex) => (
+            <div key={colIndex} className="flex flex-col gap-4">
+              {col.map((faq) => (
+                <AccordionItem
                   key={faq.id}
-                  className="aximo-accordion-card d-flex align-items-start p-4 rounded-lg shadow-sm bg-white"
-                >
-                  <div className="me-3 flex-shrink-0">
-                    <HelpCircle className="text-blue-500 w-8 h-8" />
-                  </div>
-                  <div>
-                    <h3 className="text-lg font-semibold text-black mb-1">
-                      {faq.title}
-                    </h3>
-                    <p className="text-gray-600">{faq.text}</p>
-                  </div>
-                </div>
+                  faq={faq}
+                  isOpen={openId === faq.id}
+                  onClick={() => handleToggle(faq.id)}
+                />
               ))}
             </div>
-          </div>
-
-          {/* Right Column */}
-          <div className="col-lg-6">
-            <div className="d-flex flex-column gap-4">
-              {faqData.faq2.map((faq) => (
-                <div
-                  key={faq.id}
-                  className="aximo-accordion-card d-flex align-items-start p-4 rounded-lg shadow-sm bg-white"
-                >
-                  <div className="me-3 flex-shrink-0">
-                    <HelpCircle className="text-blue-500 w-8 h-8" />
-                  </div>
-                  <div>
-                    <h3 className="text-lg font-semibold text-black mb-1">
-                      {faq.title}
-                    </h3>
-                    <p className="text-gray-600">{faq.text}</p>
-                  </div>
-                </div>
-              ))}
-            </div>
-          </div>
+          ))}
         </div>
       </div>
-    </div>
+    </section>
   );
 }
-
-export default TwoColumnFaq;

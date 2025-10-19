@@ -3,7 +3,7 @@ import FooterContent from "./FooterContent"
 
 function Footer() {
   return (
-    <footer style={{ backgroundColor: "#EDE8D0" }} className="text-light pt-5" role="contentinfo">
+    <footer className="text-light  bg-white" role="contentinfo">
       <div className="container">
         <FooterContent />
         <FooterBottom />

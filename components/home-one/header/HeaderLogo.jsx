@@ -9,8 +9,8 @@ function HeaderLogo() {
         <Image
           src={Logo}
           alt="Logo"
-          className="light-version-logo header-logo"
-        />
+          className="light-version-logo header-logo "
+        /> 
       </Link>
     </div>
   );

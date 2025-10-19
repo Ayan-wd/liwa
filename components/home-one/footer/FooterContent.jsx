@@ -3,7 +3,7 @@ import { Facebook, Instagram, Phone, Mail, MapPin } from "lucide-react"
 
 function FooterContent() {
 	return (
-		<div className="row gy-4 pb-5 border-bottom border-secondary-subtle">
+		<div className="row gy-4 pb-5py-4 border-top border-secondary ">
 			{/* About */}
 			<div className="col-12 col-md-6 col-lg-3">
 				<h2 className="h5 text-dark fw-semibold mb-3 text-balance">

@@ -15,44 +15,50 @@ function Header() {
 
   return (
     <header
-      className="site-header aximo-header-section aximo-header shadow-sm fixed-top"
+      className="site-header aximo-header-section aximo-header shadow-sm fixed-top bg-white"
       id="sticky-menu"
-      style={{
-        backgroundColor: "#EDE8D0", // same as after scroll
-      }}
     >
       <div className="container">
         <nav className="navbar site-navbar">
+          {/* <HeaderLogo/> */}
           <HeaderLogo />
-          <div className="menu-block-wrapper">
+          {/* Desktop nav: visible on large screens */}
+          <div className="d-none d-lg-block me-auto">
             <DesktopNav>
               <NavItem url="/" exact="true" className={navLinkClass}>
                 Home
               </NavItem>
-              <NavItem url="about-us" className={navLinkClass}>
+              <NavItem url="/about-us" className={navLinkClass}>
                 About Us
               </NavItem>
               {/* Products dropdown populated from services data */}
               <NavItem dropdown title="Products" className={navLinkClass}>
                 <ul className="sub-menu">
                   {getAllServices().map((s) => (
-                    <DropdownItem key={s.slug} url={`services/${s.slug}`}>
+                    <DropdownItem key={s.slug} url={`/services/${s.slug}`}>
                       {s.title}
                     </DropdownItem>
                   ))}
                 </ul>
               </NavItem>
-              <NavItem url="our-projects" className={navLinkClass}>
+              <NavItem url="/our-projects" className={navLinkClass}>
                 Projects
               </NavItem>
-              <NavItem url="contact-us" className={navLinkClass}>
+              <NavItem url="/contact-us" className={navLinkClass}>
                 Contact Us
               </NavItem>
             </DesktopNav>
           </div>
 
-          <HeaderButton />
-          <MobileNavbar menuItemsData={menuItemsData} title="LIWA" />
+          {/* Header action button (hide on small screens) */}
+          <div className="d-none d-lg-block">
+            <HeaderButton />
+          </div>
+
+          {/* Mobile nav: visible on small screens */}
+          <div className="d-lg-none">
+            <MobileNavbar menuItemsData={menuItemsData} title="LIWA" />
+          </div>
         </nav>
       </div>
     </header>

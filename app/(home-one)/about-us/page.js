@@ -2,6 +2,7 @@ import Story from "@/components/about/story";
 import BreadCrumb from "@/components/common/Breadcrumb";
 import About from "@/components/home-one/about";
 import aboutusbanner from "../../../public/images/about/aboutusbanner.jpg";
+import CallToActionSection from "@/components/common/CTA";
 
 function AboutUs() {
 	return (
@@ -12,6 +13,8 @@ function AboutUs() {
 			/>
 			<About />
 			<Story />
+			<CallToActionSection />
+
 
 		</>
 	);

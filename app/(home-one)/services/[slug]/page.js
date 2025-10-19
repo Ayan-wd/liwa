@@ -11,11 +11,34 @@ export async function generateMetadata({ params }) {
   return {
     title: `${service.title} | Liwa Industries`,
     description: service.excerpt,
+    openGraph: {
+      title: `${service.title} | Liwa Industries`,
+      description: service.excerpt,
+      images: [service.heroImage?.src || "/placeholder.svg"],
+    },
+    twitter: {
+      card: 'summary_large_image',
+      title: `${service.title} | Liwa Industries`,
+      description: service.excerpt,
+    },
   }
 }
 
-export default function ServiceDetailPage({ params }) {
+export default async function ServiceDetailPage({ params }) {
   const service = getServiceBySlug(params.slug)
   if (!service) return null
-  return <ServiceDetailClient service={service} />
+  const jsonLd = {
+    "@context": "https://schema.org",
+    "@type": "Service",
+    name: service.title,
+    description: service.excerpt,
+    url: `/services/${service.slug}`,
+  }
+
+  return (
+    <>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
+      <ServiceDetailClient service={service} />
+    </>
+  )
 }

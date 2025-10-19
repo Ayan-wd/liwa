@@ -11,6 +11,7 @@
     "@emailjs/browser": "^4.4.1",
     "@react-three/drei": "^10.7.6",
     "@react-three/fiber": "^9.3.0",
+    "@tailwindcss/vite": "^4.1.14",
     "bootstrap": "^5.3.8",
     "emailjs": "^4.0.3",
     "emailjs-com": "^3.2.0",

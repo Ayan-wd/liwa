@@ -68,10 +68,10 @@ export default function ContactForm() {
       <div className="bg-white rounded-xl shadow-2xl overflow-hidden" >
         <div className="md:flex" >
           {/* Left Info Panel */}
-          <div className="md:w-1/3 p-10 text-gray-800 flex flex-col justify-between" style={{ backgroundColor: "#EDE8D0" }}>
+          <div className="md:w-1/3 p-10 text-gray-800 flex flex-col justify-between bg-blue-700">
             <div>
-              <h2 className="text-2xl font-bold mb-4 text-black">Why Contact Us?</h2>
-              <ul className="space-y-4">
+              <h2 className="text-2xl font-bold mb-4 text-white">Why Contact Us?</h2>
+              <ul className="space-y-4 text-white">
                 <li className="flex items-start">
                   <span className="mr-2">📞</span>
                   Quick response to your queries
@@ -86,10 +86,10 @@ export default function ContactForm() {
                 </li>
               </ul>
             </div>
-            <div className="mt-8">
-              <h3 className="text-lg font-semibold mb-2 text-black">Need immediate assistance?</h3>
-              <p className="text-gray-700 mb-2">Call us at +971 54 393 1009 /  <span>+971 50 168 1993</span></p>
-              <p className="text-sm text-gray-600">Our team is available 10AM - 6PM, Monday to Saturday</p>
+            <div className="mt-8 text-white">
+              <h3 className="text-lg font-semibold mb-2 text-white">Need immediate assistance?</h3>
+              <p className=" mb-2 ">Call us at +971 54 393 1009 /  <span>+971 50 168 1993</span></p>
+              <p className="text-sm ">Our team is available 10AM - 6PM, Monday to Saturday</p>
             </div>
           </div>
 
@@ -152,8 +152,7 @@ export default function ContactForm() {
                 <button
                   type="submit"
                   disabled={loading}
-                  className="w-full py-3 px-6] text-gray-800 font-medium rounded-full shadow-sm  transition duration-300"
-                  style={{ backgroundColor: "#EDE8D0" }}
+                  className="w-full py-3 px-6] text-white font-medium rounded-full shadow-sm  transition duration-300 bg-blue-700"
                 >
                   {loading ? "Sending..." : "Send Message"}
                 </button>

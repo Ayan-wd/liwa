@@ -3,7 +3,7 @@ import Video from "./Video";
 
 function About() {
 	return (
-		<div className="section aximo-section-padding">
+		<div className="section aximo-section-padding ">
 			<div id="aximo-counter"></div>
 			<div className="container">
 				<div className="aximo-section-title">

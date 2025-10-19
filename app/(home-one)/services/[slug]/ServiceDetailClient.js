@@ -148,22 +148,21 @@ export default function ServiceDetailClient({ service }) {
             <h3 className=" mb-4 text-black text-center">
               Related Products
             </h3>
-            <div className="row  text-justify ">
+            <div className="row text-justify">
               {getAllServices()
                 .filter((s) => s.slug !== service.slug)
                 .slice(0, 3)
                 .map((s) => (
                   <div key={s.slug} className="col-12 col-md-4 mb-4">
-                    <Link
-                      href={`/services/${s.slug}`}
-                      className="text-decoration-none"
-                    >
-                      <div className="card border-0 shadow-sm h-100 rounded-4 text-center p-4 hover-shadow">
-                        <div className="mb-3">
-                          <i className={`${s.icon || "icon-industry"} fs-1 text-primary`} />
+                    <Link href={`/services/${s.slug}`} className="text-decoration-none">
+                      <div className="card border-0 shadow-sm h-100 rounded-4 overflow-hidden text-start">
+                        <div className="position-relative" style={{ aspectRatio: "4/3" }}>
+                          <Image src={s.heroImage || "/placeholder.svg"} alt={s.title} fill style={{ objectFit: "cover" }} />
                         </div>
-                        <h5 className="fw-bold text-dark">{s.title}</h5>
-                        <p className="text-muted small">{s.excerpt}</p>
+                        <div className="p-3">
+                          <h5 className="fw-bold text-dark mb-1">{s.title}</h5>
+                          <p className="text-muted small mb-0 text-truncate-3">{s.excerpt}</p>
+                        </div>
                       </div>
                     </Link>
                   </div>

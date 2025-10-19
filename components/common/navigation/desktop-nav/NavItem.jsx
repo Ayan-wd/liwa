@@ -2,7 +2,8 @@
 import Link from "next/link";
 
 function NavItem({ dropdown, title, children, url = "", className = "" }) {
-  const urlFormated = url !== "/" ? `/${url}` : "/";
+  // Ensure the url has a single leading slash and empty -> '/'
+  const urlFormated = url === "" ? "/" : url.startsWith("/") ? url : `/${url}`;
 
   return dropdown ? (
     <li className="nav-item nav-item-has-children">

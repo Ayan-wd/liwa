@@ -2,16 +2,6 @@
 
 import { Mousewheel, Pagination } from "swiper/modules";
 import { Swiper, SwiperSlide } from "swiper/react";
-import Project1Img from "../../../public/images/v1/projects/wasit-gas-plant.jpg";
-import Project2Img from "../../../public/images/v1/projects/fadihi-gas-plant.jpg";
-import Project3Img from "../../../public/images/v1/projects/sadara.jpg";
-import Project4Img from "../../../public/images/v1/projects/manifa.jpeg";
-import Project5Img from "../../../public/images/v1/projects/karan.jpg";
-import Project6Img from "../../../public/images/v1/projects/petrokemya.jpeg";
-import Project7Img from "../../../public/images/v1/projects/sabic.jpg";
-import Project8Img from "../../../public/images/v1/projects/hadeed.jpg";
-import Project9Img from "../../../public/images/v1/projects/sharq.bmp";
-import Project10Img from "../../../public/images/v1/projects/sadaf.bmp";
 import ProjectCard from "./ProjectCard";
 import { getAllProjects } from "@/lib/projects";
 import "swiper/css";
@@ -54,10 +44,10 @@ function Projects() {
               <ProjectCard project={project} />
             </SwiperSlide>
           ))}
-          <div className="text-center mt-5">
+          <div className="text-center mt-5 ">
             <Link
               href="/our-projects"
-              className="btn btn-primary rounded-pill px-4 py-2"
+              className="btn btn-primary rounded-pill px-4 py-2 "
             >
               View All Projects
             </Link>

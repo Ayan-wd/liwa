@@ -1,5 +1,6 @@
 import FadeInStagger from "@/components/animation/FadeInStagger";
 import ServiceCard from "./ServiceCard";
+import Link from "next/link";
 
 function Services({ services }) {
 	return (
@@ -30,6 +31,14 @@ function Services({ services }) {
 							<ServiceCard service={item} />
 						</FadeInStagger>
 					))}
+					<div className="text-center mt-5">
+						<Link
+							href="/services"
+							className="btn btn-primary rounded-pill px-4 py-2"
+						>
+							View All Products
+						</Link>
+					</div>
 				</div>
 
 			</div>

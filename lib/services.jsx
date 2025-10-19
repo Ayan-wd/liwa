@@ -1,9 +1,9 @@
 import CustomAlloys from "../public/images/service/servicesdetail/CUSTOM-GRADES -ALLOYS.jpg";
-import FlangesFittings from "../public/images/service/servicesdetail/FLANGES-SPECTACLES.jpg";
+import FlangesFittings from "../public/images/service/servicesdetail/FLANGESSPECTACLES.jpg";
 import Procurement from "../public/images/service/servicesdetail/INDUSTRY-SPECIFICEXPERTISE.jpg";
 import IndustrialValves from "../public/images/service/servicesdetail/industrialvalves.jpg";
-import BwForged from "../public/images/service/servicesdetail/BW-FORGED-FITTINGS.jpg";
-import Olets from "../public/images/service/servicesdetail/O’LETS.jpg";
+import BwForged from "../public/images/service/servicesdetail/BWFORGEDFITTINGS.jpg";
+import Olets from "../public/images/service/servicesdetail/OLETS.jpg";
 import Compressionfitting from "../public/images/service/servicesdetail/COMPRESSION-FITTINGS.jpg";
 import PipeCasing from "../public/images/service/servicesdetail/PIPES-CASING.jpg";
 export const services = [
@@ -17,7 +17,7 @@ export const services = [
     sections: [
       {
         heading: "Overview",
-        body: "Our range of industrial valves ensures efficiency and reliability under demanding operating conditions.",
+        body: "Our range of industrial valves ensures efficiency and reliability under demanding operating conditions. Each valve is designed to handle high pressure and temperature variations while maintaining precise flow control and system integrity. With proven field performance, our valves provide long service life and low maintenance costs.",
       },
       {
         heading: "Products",
@@ -44,7 +44,7 @@ export const services = [
     sections: [
       {
         heading: "Overview",
-        body: "Precision-engineered flanges and spectacle blinds ensure leak-proof, durable connections across oilfield operations.",
+        body: "Precision-engineered flanges and spectacle blinds ensure leak-proof, durable connections across oilfield operations. Manufactured under strict quality control, our products offer exceptional resistance to corrosion and pressure fluctuations. Each component meets ASME, API, and DIN standards to guarantee safety and longevity.",
       },
       {
         heading: "Products",
@@ -71,7 +71,7 @@ export const services = [
     sections: [
       {
         heading: "Overview",
-        body: "Fittings manufactured to global standards, supporting high-pressure and high-temperature applications.",
+        body: "Fittings manufactured to global standards, supporting high-pressure and high-temperature applications. Our forged and butt-weld fittings ensure reliable performance in critical process systems. Available in multiple material grades and finishes, they guarantee precision alignment and structural integrity.",
       },
       {
         heading: "Products",
@@ -93,7 +93,7 @@ export const services = [
     sections: [
       {
         heading: "Overview",
-        body: "We supply a wide range of O’lets engineered to support piping flexibility and safety.",
+        body: "We supply a wide range of O’lets engineered to support piping flexibility and safety. Designed for high-pressure and high-temperature service, our O’lets ensure smooth flow distribution and leak-free performance. Each product is precision-machined for perfect fitment and long-term reliability.",
       },
       {
         heading: "Products",
@@ -116,14 +116,11 @@ export const services = [
     sections: [
       {
         heading: "Overview",
-        body: "Pipes and casing products built for durability and performance across energy and industrial projects.",
+        body: "Pipes and casing products built for durability and performance across energy and industrial projects. Manufactured using high-grade raw materials and advanced techniques, our pipes ensure consistent dimensional accuracy and superior corrosion resistance. Suitable for both onshore and offshore environments.",
       },
       {
         heading: "Specifications",
-        bullets: [
-          "Seamless Pipes & Tubes",
-          "ERW, EFW, SAW, LSAW",
-        ],
+        bullets: ["Seamless Pipes & Tubes", "ERW, EFW, SAW, LSAW"],
       },
     ],
     specs: { leadTime: "Stock + scheduled", regions: ["Global"] },
@@ -138,7 +135,7 @@ export const services = [
     sections: [
       {
         heading: "Overview",
-        body: "High-performance compression fittings designed for ease of installation and leak-proof service.",
+        body: "High-performance compression fittings designed for ease of installation and leak-proof service. Our fittings provide excellent resistance to vibration, temperature, and pressure variations. Ideal for instrumentation, hydraulic, and pneumatic systems requiring precision and safety.",
       },
       {
         heading: "Products",
@@ -161,7 +158,7 @@ export const services = [
     sections: [
       {
         heading: "Overview",
-        body: "We provide custom alloy solutions compliant with ASTM and international standards.",
+        body: "We provide custom alloy solutions compliant with ASTM and international standards. Our materials are sourced from globally approved mills and tailored for strength, corrosion resistance, and performance in extreme conditions. Whether for offshore, refinery, or chemical processing applications, we deliver materials engineered to perform.",
       },
       {
         heading: "Grades",
@@ -177,15 +174,15 @@ export const services = [
   },
   {
     slug: "expertise",
-    title: "Industry Expertise & Stocking",
+    title: "Industry Expertise",
     excerpt:
-      "Rapid delivery, industry-specific expertise, and reliable stockholding to support global projects efficiently.",
+      "Rapid delivery, industry-specific expertise, and reliable stockholding to support global projects.",
     icon: "icon-globe",
     heroImage: Procurement,
     sections: [
       {
         heading: "Overview",
-        body: "With extensive stock and industry know-how, we ensure timely supply and project support worldwide.",
+        body: "With extensive stock and industry know-how, we ensure timely supply and project support worldwide. Our team combines technical expertise with logistical strength to meet urgent project needs. From oilfield operations to industrial plants, we help clients minimize downtime and optimize supply chains.",
       },
       {
         heading: "Benefits",
@@ -199,6 +196,7 @@ export const services = [
     specs: { leadTime: "Project-based & stocked", regions: ["Global"] },
   },
 ];
+
 
 
 // Convenience helpers

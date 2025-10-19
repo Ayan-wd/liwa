@@ -3,7 +3,6 @@ import { notFound } from 'next/navigation';
 import { getProjectBySlug, getAllProjects } from '@/lib/projects';
 import BreadCrumb from '@/components/common/Breadcrumb';
 import projectsbanner from '../../../../public/images/v1/projectsbanner.jpg';
-
 export async function generateStaticParams() {
   return getAllProjects().map(p => ({ slug: p.slug }));
 }
@@ -14,19 +13,57 @@ export function generateMetadata({ params }) {
   return {
     title: `${project.title} | Our Projects`,
     description: project.description?.slice(0, 160) || undefined,
+    openGraph: {
+      title: `${project.title} | Our Projects`,
+      description: project.description?.slice(0, 160) || undefined,
+      images: [project.img?.src || projectsbanner.src],
+    },
+    twitter: {
+      card: 'summary_large_image',
+      title: `${project.title} | Our Projects`,
+      description: project.description?.slice(0, 160) || undefined,
+    },
   };
 }
 
-export default function ProjectDetail({ params }) {
+export default async function ProjectDetail({ params }) {
   const project = getProjectBySlug(params.slug);
   if (!project) return notFound();
 
   const related = getAllProjects().filter((p) => p.slug !== project.slug).slice(0, 4);
 
+  const jsonLd = {
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    name: project.title,
+    description: project.description,
+    url: `/our-projects/${project.slug}`,
+    mainEntity: {
+      "@type": "CreativeWork",
+      name: project.title,
+      description: project.description,
+      image: project.img?.src || null,
+    },
+  };
+
   return (
     <main >
       <BreadCrumb title={project.title} backgroundImage={projectsbanner.src} />
-
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
+      <div className="text-center mb-14 mt-5">
+        <h3 className="text-sm uppercase tracking-wide text-blue-600 font-semibold">
+          Projects
+        </h3>
+        <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mt-2">
+          Delivering Excellence{" "}
+          <span className="text-blue-600">
+            in Oilfield & Industrial Solutions
+          </span>
+        </h2>
+        <p className="text-gray-600 mt-3 max-w-2xl mx-auto text-base">
+          Our portfolio showcases world-class engineering and project execution across oil, gas, and petrochemical industries.
+        </p>
+      </div>
       <div className="container py-5">
         <div className="row g-4">
           <div className="col-12">
@@ -50,7 +87,7 @@ export default function ProjectDetail({ params }) {
 
               {/* Main content (description + optional sections) */}
               <section className="mb-4">
-                <h2 className="h5 mb-2">Project Overview</h2>
+                <h2 className="h5 mb-2 text-black">Project Overview</h2>
                 <p className="text-muted">{project.description}</p>
               </section>
 
@@ -68,23 +105,14 @@ export default function ProjectDetail({ params }) {
                 </section>
               ))}
 
-              {/* Call to action */}
-              <div className="mt-4 p-4 bg-light rounded shadow-sm d-flex flex-column flex-sm-row gap-3 align-items-center">
-                <div>
-                  <h3 className="h6 mb-1">Interested in this project?</h3>
-                  <p className="mb-0 text-muted">Contact our team for case studies, specs, or partnership opportunities.</p>
-                </div>
-                <div className="ms-auto">
-                  <a href="/contact-us" className="btn btn-primary">Contact Us</a>
-                </div>
-              </div>
+           
             </article>
           </div>
 
           <aside className="col-12 col-lg-4">
             <div className="card border-0 shadow-sm mb-4">
               <div className="card-body">
-                <h4 className="h6 mb-3">Related Projects</h4>
+                <h4 className="h6 mb-3 text-black">Related Projects</h4>
                 <ul className="list-unstyled mb-0">
                   {related.map((r) => (
                     <li key={r.slug} className="mb-2">
